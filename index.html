@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taldyk Alumni · Конкурс логотипа</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1B1D28; --bg2:#222533; --surface:#262938; --surface2:#2E3243;
+  --line:rgba(255,255,255,.09); --text:#F5F5F7; --muted:#A4A7B6; --dim:#6E7183;
+  --lime:#C8F135; --violet:#8B6CFF; --coral:#FF6E5A; --teal:#17BFA5; --blue:#3D74FF; --orange:#FF9A3C;
+  --navy:#14172A;
+  --r:28px;
+  --sans:'Onest',system-ui,sans-serif; --serif:'Playfair Display',Georgia,serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.5}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+   radial-gradient(900px 520px at 50% -8%, rgba(139,108,255,.16), transparent 70%),
+   radial-gradient(700px 500px at 100% 30%, rgba(23,191,165,.07), transparent 70%),
+   radial-gradient(700px 500px at 0% 60%, rgba(200,241,53,.05), transparent 70%);}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");}
+main,header,footer{position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;padding:16px 0;transition:background .3s, backdrop-filter .3s}
+.nav.scrolled{background:rgba(27,29,40,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.brand small{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.01em;margin-top:1px}
+.brand-mark{width:34px;height:34px;border-radius:11px;background:var(--lime);display:grid;place-items:center;color:var(--navy);font-weight:900;font-size:15px;letter-spacing:-.04em;transform:rotate(-6deg);transition:transform .4s}
+.brand:hover .brand-mark{transform:rotate(6deg) scale(1.06)}
+.menu{display:flex;gap:4px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:5px}
+.menu a{padding:9px 16px;border-radius:999px;font-size:14px;font-weight:500;color:var(--muted);transition:.25s}
+.menu a:hover,.menu a.active{background:rgba(255,255,255,.09);color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-right .ig{font-size:14px;color:var(--muted);border-bottom:1px solid currentColor;padding-bottom:1px}
+.nav-right .ig:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .25s, box-shadow .25s, background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{box-shadow:0 10px 30px rgba(255,255,255,.18)}
+.btn-lime{background:var(--lime);color:var(--navy)}
+.btn-lime:hover{box-shadow:0 10px 30px rgba(200,241,53,.3)}
+.btn-ghost{border:1px solid rgba(255,255,255,.2)}
+.btn-ghost:hover{background:rgba(255,255,255,.06)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn .arr{width:26px;height:26px;border-radius:50%;background:var(--lime);color:var(--navy);display:grid;place-items:center;margin-right:-10px;transition:transform .3s}
+.btn:hover .arr{transform:rotate(-45deg)}
+
+/* HERO */
+.hero{position:relative;padding-top:46px;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:500;color:#DCDDE5}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(200,241,53,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(200,241,53,.55)}70%{box-shadow:0 0 0 10px rgba(200,241,53,0)}100%{box-shadow:0 0 0 0 rgba(200,241,53,0)}}
+h1{font-size:clamp(40px,7vw,100px);line-height:.98;letter-spacing:-.045em;font-weight:800;margin:22px 0 22px}
+h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+h1 .ln span{display:inline-block;transform:translateY(105%);animation:rise 1s cubic-bezier(.2,.8,.2,1) forwards}
+h1 .ln:nth-child(2) span{animation-delay:.12s}
+h1 .ln.small{font-size:.5em;color:var(--lime);letter-spacing:-.03em;margin-top:.15em}
+h1 .ln:nth-child(3) span{animation-delay:.24s}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:600;letter-spacing:-.02em;background:linear-gradient(180deg,#fff,#C9CAD6);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+@keyframes rise{to{transform:translateY(0)}}
+.sub{max-width:640px;margin:0 auto;color:var(--muted);font-size:clamp(16px,1.6vw,19px);opacity:0;animation:fade .8s .45s forwards}
+.hero-ctas{display:flex;gap:12px;justify-content:center;margin-top:28px;opacity:0;animation:fade .8s .6s forwards;flex-wrap:wrap}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.tag{position:absolute;display:flex;align-items:flex-start;gap:2px;font-weight:700;font-size:15px;pointer-events:none;z-index:3;opacity:0;animation:tagIn .6s forwards, drift var(--d,7s) ease-in-out infinite alternate}
+.tag svg{width:22px;height:22px;flex:none;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
+.tag b{margin-top:14px;padding:5px 13px;border-radius:999px;color:var(--navy)}
+@keyframes tagIn{to{opacity:1}}
+@keyframes drift{0%{transform:translate(0,0)}50%{transform:translate(var(--dx,14px),var(--dy,-10px))}100%{transform:translate(calc(var(--dx,14px)*-.6),calc(var(--dy,-10px)*-.8))}}
+.sparkle{position:absolute;width:10px;height:10px;pointer-events:none;animation:twinkle 3s ease-in-out infinite}
+.sparkle::before,.sparkle::after{content:"";position:absolute;inset:0;margin:auto;background:#fff;border-radius:2px}
+.sparkle::before{width:2px;height:10px}.sparkle::after{width:10px;height:2px}
+@keyframes twinkle{0%,100%{opacity:.15;transform:scale(.6) rotate(0)}50%{opacity:.9;transform:scale(1) rotate(45deg)}}
+
+.fan-box{position:relative;margin-top:30px;overflow:hidden;height:540px}
+.fan{position:absolute;left:50%;top:40px;width:1240px;height:560px;margin-left:-620px;transform-origin:top center}
+.cw{position:absolute;top:var(--y);left:var(--x);width:var(--w);height:var(--h);transform:rotate(var(--rot));transform-origin:50% 120%;opacity:0;animation:fanIn 1.1s cubic-bezier(.2,.9,.25,1) forwards;animation-delay:var(--del)}
+@keyframes fanIn{from{opacity:0;transform:translateY(260px) rotate(0deg)}to{opacity:1;transform:rotate(var(--rot))}}
+.card{position:relative;width:100%;height:100%;border-radius:var(--r);background:var(--c);overflow:hidden;transition:transform .45s cubic-bezier(.2,.9,.25,1), box-shadow .45s;box-shadow:0 30px 60px -20px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.25);cursor:pointer}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.22),transparent 45%);pointer-events:none}
+.cw:hover .card{transform:translateY(-22px)}
+.card h3{position:absolute;left:24px;top:22px;font-size:32px;font-weight:800;letter-spacing:-.03em;line-height:1;color:#fff;text-align:left}
+.card h3 small{display:block;font-size:17px;font-weight:500;opacity:.8;margin-top:6px;letter-spacing:0}
+.card.dark-text h3{color:var(--navy)}
+.card .obj{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);width:84%;transition:transform .5s cubic-bezier(.2,.9,.25,1)}
+.cw:hover .obj{transform:translateX(-50%) scale(1.05) rotate(-2deg)}
+.card .obj svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 22px rgba(0,0,0,.28))}
+.card.center h3{font-size:38px}
+.card .try{position:absolute;left:22px;right:22px;bottom:22px;display:flex;justify-content:space-between;align-items:center;background:#fff;color:var(--navy);border-radius:999px;padding:8px 8px 8px 22px;font-weight:700;font-size:16px;transition:transform .3s}
+.card .try i{width:38px;height:38px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-style:normal;transition:transform .3s}
+.card .try:hover i{transform:rotate(-45deg)}
+.card.center .obj{bottom:92px;width:78%}
+.float{position:absolute;animation:bob 4.5s ease-in-out infinite;z-index:2}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--fr,0deg))}50%{transform:translateY(-16px) rotate(calc(var(--fr,0deg) + 6deg))}}
+.ping{position:absolute;width:20px;height:5px;border-radius:4px;background:var(--lime)}
+
+/* MARQUEE */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:18px 0;background:rgba(255,255,255,.02)}
+.mq{display:flex;gap:40px;white-space:nowrap;animation:mq 38s linear infinite;width:max-content}
+.mq span{font-size:22px;font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:40px}
+.mq span::after{content:"";width:10px;height:10px;border-radius:3px;background:var(--lime);transform:rotate(45deg)}
+.mq span:nth-child(3n+2){font-family:var(--serif);font-style:italic;font-weight:600;color:#D6D7E0}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+section{padding:120px 0 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:44px;flex-wrap:wrap}
+.sec-label{color:var(--lime);margin-bottom:16px;display:block}
+h2{font-size:clamp(38px,5.4vw,72px);line-height:1;letter-spacing:-.04em;font-weight:800}
+h2 em{font-family:var(--serif);font-style:italic;font-weight:600;letter-spacing:-.02em}
+.lead{color:var(--muted);font-size:18px;max-width:460px}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:36px;position:relative;overflow:hidden}
+.about-text p{font-size:21px;line-height:1.5;color:#D9DAE2;letter-spacing:-.01em}
+.about-text p b{color:#fff;font-weight:700}
+.about-text p+p{margin-top:18px;font-size:16px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{padding:8px 14px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:#D5D6DF;background:rgba(255,255,255,.03);transition:.25s}
+.chip:hover{background:var(--lime);color:var(--navy);border-color:var(--lime)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.stat{padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:190px}
+.stat .num{font-size:clamp(44px,5vw,66px);font-weight:800;letter-spacing:-.05em;line-height:1}
+.stat .cap{color:var(--muted);font-size:15px;margin-top:10px}
+.stat.lime{background:var(--lime);color:var(--navy);border:0}.stat.lime .cap{color:rgba(20,23,42,.7)}
+.stat.violet{background:var(--violet);border:0}.stat.violet .cap{color:rgba(255,255,255,.8)}
+
+.counter{display:flex;align-items:center;gap:16px}
+.counter b{font-size:clamp(56px,6vw,84px);font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--lime)}
+.counter > span{color:var(--muted);font-size:15px;line-height:1.35}
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.act{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;min-height:290px;display:flex;flex-direction:column;overflow:hidden;transition:transform .45s cubic-bezier(.2,.9,.25,1), border-color .45s}
+.act::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--c);opacity:.0;right:-90px;top:-90px;transition:opacity .45s, transform .6s;transform:scale(.6)}
+.act:hover{transform:translateY(-6px);border-color:var(--c)}
+.act:hover::after{opacity:.16;transform:scale(1)}
+.ai{width:60px;height:60px;border-radius:18px;background:var(--c);display:grid;place-items:center;color:var(--navy);margin-bottom:auto;transition:transform .5s cubic-bezier(.2,.9,.25,1.4);position:relative;z-index:1}
+.act:hover .ai{transform:rotate(-10deg) scale(1.08)}
+.ai svg{width:30px;height:30px}
+.act h3{font-size:26px;letter-spacing:-.03em;margin-top:30px;position:relative;z-index:1}
+.act p{color:var(--muted);margin-top:8px;font-size:15px;position:relative;z-index:1}
+/* BRIEF */
+.symbols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sym{padding:30px;min-height:330px;display:flex;flex-direction:column;transition:transform .4s, background .4s}
+.sym:hover{transform:translateY(-6px);background:var(--surface2)}
+.sym .num{position:absolute;right:26px;top:26px;width:38px;height:38px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:600}
+.sym svg{width:120px;height:120px;margin-bottom:auto}
+.sym svg path,.sym svg circle,.sym svg line{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1)}
+.sym.in svg path,.sym.in svg circle,.sym.in svg line{stroke-dashoffset:0}
+.sym h3{font-size:30px;letter-spacing:-.03em;margin-top:26px}
+.sym h3 em{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--muted);margin-left:6px}
+.sym p{color:var(--muted);margin-top:8px}
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.rules h4{font-size:20px;letter-spacing:-.02em;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.rules ul{list-style:none;display:grid;gap:12px}
+.rules li{display:flex;gap:12px;color:#D5D6DF;font-size:16px}
+.rules li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;margin-top:1px;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%2314172A' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.rules .no li::before{background:var(--coral) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 7l10 10M17 7L7 17' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") center/14px no-repeat}
+
+/* TRY-ON */
+.studio{background:var(--lime);color:var(--navy);border-radius:36px;padding:40px;display:grid;grid-template-columns:340px 1fr;gap:30px;position:relative;overflow:hidden}
+.studio .sec-label{color:var(--navy);opacity:.7}
+.studio h2{font-size:clamp(36px,4.4vw,58px)}
+.studio .lead{color:rgba(20,23,42,.72);margin-top:14px;font-size:16px}
+.drop{margin-top:26px;border:2px dashed rgba(20,23,42,.35);border-radius:22px;padding:28px 20px;text-align:center;background:rgba(255,255,255,.35);transition:.25s;cursor:pointer;position:relative}
+.drop:hover,.drop.over{background:rgba(255,255,255,.6);border-color:var(--navy);transform:scale(1.01)}
+.drop .ic{width:52px;height:52px;border-radius:16px;background:var(--navy);color:var(--lime);display:grid;place-items:center;margin:0 auto 12px;transition:transform .3s}
+.drop:hover .ic{transform:translateY(-4px) rotate(-6deg)}
+.drop b{display:block;font-size:17px}
+.drop span{font-size:13px;opacity:.65}
+.file-chip{display:none;margin-top:12px;align-items:center;gap:12px;background:var(--navy);color:#fff;border-radius:16px;padding:10px 12px}
+.file-chip.show{display:flex}
+.file-chip img{width:40px;height:40px;object-fit:contain;background:#fff;border-radius:10px;padding:4px}
+.file-chip .nm{flex:1;min-width:0;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.file-chip button{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.1)}
+.ctrl{margin-top:22px}
+.ctrl label{display:block;font-size:13px;font-weight:600;margin-bottom:10px;opacity:.75}
+.seg{display:flex;gap:6px;background:rgba(20,23,42,.08);padding:5px;border-radius:999px}
+.seg button{flex:1;padding:9px 8px;border-radius:999px;font-size:14px;font-weight:600;color:var(--navy);display:flex;align-items:center;justify-content:center;gap:7px;transition:.25s}
+.seg button i{width:14px;height:14px;border-radius:50%;border:1.5px solid rgba(20,23,42,.35)}
+.seg button.on{background:var(--navy);color:#fff}
+input[type=range]{width:100%;accent-color:var(--navy)}
+.studio-actions{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.studio-actions .btn{padding:12px 18px;font-size:14px}
+.note{font-size:12px;opacity:.65;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-content:start}
+.tile{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3;background:#fff;transition:transform .4s cubic-bezier(.2,.9,.25,1), box-shadow .4s}
+.tile:hover{transform:translateY(-5px);box-shadow:0 20px 40px -18px rgba(20,23,42,.5)}
+.tile svg{width:100%;height:100%;display:block}
+.tile .dl{position:absolute;right:10px;bottom:10px;width:36px;height:36px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;opacity:0;transform:translateY(6px);transition:.3s;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+.tile:hover .dl{opacity:1;transform:none}
+.tile.pop svg{animation:pop .6s cubic-bezier(.2,.9,.25,1.3)}
+@keyframes pop{0%{transform:scale(.94)}100%{transform:scale(1)}}
+
+/* SUBMIT */
+.submit{display:grid;grid-template-columns:1fr 1.25fr;gap:20px}
+.steps-mini{display:grid;gap:12px;margin-top:30px}
+.steps-mini div{display:flex;gap:14px;align-items:center;color:#D5D6DF}
+.steps-mini b{width:34px;height:34px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;font-size:14px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{display:flex;flex-direction:column;gap:7px}
+.f.full{grid-column:1/-1}
+.f label{font-size:13px;color:var(--muted);font-weight:500}
+.f label i{color:var(--lime);font-style:normal}
+.f input,.f select,.f textarea{font:inherit;font-size:15px;color:var(--text);background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:13px 15px;outline:none;transition:.25s;width:100%}
+.f select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%23A4A7B6' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px}
+.f select option{background:var(--bg2)}
+.f textarea{min-height:110px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--lime);background:rgba(200,241,53,.05)}
+.f.err input,.f.err select,.f.err textarea{border-color:var(--coral)}
+.attach{display:flex;align-items:center;gap:12px;border:1px dashed rgba(255,255,255,.2);border-radius:14px;padding:12px 14px;font-size:14px;color:var(--muted)}
+.attach img{width:42px;height:42px;object-fit:contain;background:#fff;border-radius:10px;padding:4px;display:none}
+.attach.has img{display:block}
+.attach.has{border-style:solid;border-color:rgba(200,241,53,.5);color:var(--text)}
+.attach button{margin-left:auto;font-size:13px;font-weight:600;color:var(--lime)}
+.check{display:flex;flex-direction:row !important;gap:12px;align-items:flex-start;font-size:14px;color:#D5D6DF;cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--lime);flex:none;margin-top:1px}
+.check.err{color:var(--coral)}
+form .btn{justify-self:start}
+
+/* PRIZE */
+.prize{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.prize-vis{background:var(--violet);border:0;min-height:460px;display:flex;align-items:flex-end;justify-content:center;padding:30px 20px 0}
+.prize-vis::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.28),transparent 65%);top:-60px;left:50%;margin-left:-260px}
+.prize-vis svg{width:100%;max-width:560px;position:relative}
+.prize-vis .lid{transform-box:fill-box;transform-origin:100% 100%;animation:lid 4s ease-in-out infinite}
+@keyframes lid{0%,100%{transform:translate(-6px,-10px) rotate(9deg)}50%{transform:translate(-6px,-22px) rotate(14deg)}}
+.prize-vis .peek{animation:peek 4s ease-in-out infinite}
+@keyframes peek{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.prize-list{display:flex;flex-direction:column}
+.prize-list h3{font-size:34px;letter-spacing:-.03em;line-height:1.05}
+.items{list-style:none;margin-top:24px;display:grid;gap:4px}
+.items li{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+.items li span{color:var(--muted);font-family:var(--mono);font-size:12px}
+.bonus{margin-top:auto;padding-top:26px;color:var(--muted);font-size:15px}
+.bonus b{color:var(--lime)}
+
+/* TIMELINE */
+.tl{background:var(--surface);border:1px solid var(--line);border-radius:36px;padding:44px 40px}
+.tl-track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:10px}
+.tl-line{position:absolute;left:0;right:0;top:19px;height:2px;background:rgba(255,255,255,.1);border-radius:2px}
+.tl-line i{position:absolute;inset:0;background:var(--lime);transform-origin:left;transform:scaleX(0);transition:transform 2s cubic-bezier(.4,0,.2,1)}
+.tl.in .tl-line i{transform:scaleX(1)}
+.st{position:relative;padding-top:58px}
+.st::before{content:"";position:absolute;top:10px;left:0;width:20px;height:20px;border-radius:50%;background:var(--bg);border:2px solid rgba(255,255,255,.3);transition:.5s}
+.tl.in .st::before{background:var(--lime);border-color:var(--lime);box-shadow:0 0 0 6px rgba(200,241,53,.15)}
+.tl.in .st:nth-child(2)::before{transition-delay:.1s}.tl.in .st:nth-child(3)::before{transition-delay:.6s}.tl.in .st:nth-child(4)::before{transition-delay:1.1s}.tl.in .st:nth-child(5)::before{transition-delay:1.6s}
+.st .mono{color:var(--lime)}
+.st h4{font-size:22px;letter-spacing:-.02em;margin:8px 0 6px}
+.st p{color:var(--muted);font-size:15px}
+.score{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.score div{flex:1;min-width:220px;border-radius:20px;padding:20px 22px;display:flex;align-items:center;gap:16px}
+.score b{font-size:38px;font-weight:800;letter-spacing:-.04em}
+.score .a{background:var(--teal)}.score .b{background:var(--orange);color:var(--navy)}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:1fr 1.6fr;gap:40px}
+.qa{border-bottom:1px solid var(--line)}
+.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:19px;font-weight:600;text-align:left;letter-spacing:-.01em}
+.qa button i{width:34px;height:34px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,.2);position:relative;transition:.35s}
+.qa button i::before,.qa button i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:currentColor;margin:-1px 0 0 -6px;transition:.35s}
+.qa button i::after{transform:rotate(90deg)}
+.qa.open button i{background:var(--lime);border-color:var(--lime);color:var(--navy);transform:rotate(180deg)}
+.qa.open button i::after{transform:rotate(0)}
+.qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.qa.open .ans{grid-template-rows:1fr}
+.qa .ans div{overflow:hidden;color:var(--muted);font-size:16px}
+.qa .ans p{padding-bottom:22px;max-width:640px}
+
+/* FOOTER */
+footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;overflow:hidden}
+.big{font-size:clamp(56px,12.6vw,190px);font-weight:900;letter-spacing:-.06em;line-height:.85;white-space:nowrap}
+.big em{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--lime);letter-spacing:-.03em}
+.foot{display:flex;justify-content:space-between;gap:20px;margin-top:36px;color:var(--muted);font-size:14px;flex-wrap:wrap}
+.foot a{color:var(--text);border-bottom:1px solid var(--line)}
+
+/* MODAL + TOAST */
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:rgba(10,11,18,.6);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:.3s;padding:20px}
+.modal.show{opacity:1;pointer-events:auto}
+.modal .m{background:var(--bg2);border:1px solid var(--line);border-radius:28px;padding:34px;max-width:460px;width:100%;transform:scale(.94);transition:.35s cubic-bezier(.2,.9,.25,1.2);text-align:center}
+.modal.show .m{transform:none}
+.modal .badge{width:64px;height:64px;border-radius:20px;background:var(--lime);color:var(--navy);display:grid;place-items:center;margin:0 auto 18px;font-size:30px;font-weight:800}
+.modal h3{font-size:26px;letter-spacing:-.02em}
+.modal p{color:var(--muted);margin:10px 0 22px}
+.toast{position:fixed;left:50%;bottom:24px;z-index:120;transform:translate(-50%,120px);background:#fff;color:var(--navy);padding:13px 20px;border-radius:999px;font-weight:600;font-size:14px;box-shadow:0 14px 40px rgba(0,0,0,.35);transition:transform .45s cubic-bezier(.2,.9,.25,1.2);display:flex;align-items:center;gap:10px}
+.toast.show{transform:translate(-50%,0)}
+.toast i{width:10px;height:10px;border-radius:50%;background:var(--lime);flex:none}
+
+
+.brand-mark{width:40px;height:40px;border-radius:12px;background:#fff;display:grid;place-items:center;transform:rotate(-4deg);transition:transform .4s;overflow:hidden}
+.brand-mark img{width:30px;height:30px;object-fit:contain}
+.pill-mark{width:22px;height:22px;object-fit:contain;background:#fff;border-radius:7px;padding:2px}
+.big img{height:.72em;width:auto;vertical-align:-.04em;margin-right:.12em;background:#fff;border-radius:.16em;padding:.06em}
+.now{display:grid;grid-template-columns:420px 1fr;gap:20px}
+.now-logo{background:#fff;border-radius:var(--r);display:grid;place-items:center;padding:30px;min-height:320px;overflow:hidden}
+.now-logo img{width:100%;max-width:330px;transition:transform .6s cubic-bezier(.2,.9,.25,1)}
+.now-logo:hover img{transform:scale(1.05) rotate(-2deg)}
+.now-text{display:flex;flex-direction:column;justify-content:center}
+.now-text h3{font-size:clamp(26px,3vw,36px);letter-spacing:-.03em;margin:10px 0 14px;line-height:1.1}
+.now-text p{color:#D5D6DF;font-size:17px}.now-text p+p{margin-top:12px;color:var(--muted);font-size:16px}
+.ideas-label{color:var(--muted);margin:56px 0 18px}
+.sym-img{height:190px;display:grid;place-items:center;margin:-6px -6px auto}
+.sym-img img{max-height:190px;max-width:100%;object-fit:contain;filter:drop-shadow(0 18px 24px rgba(0,0,0,.35));transform:translateY(20px) scale(.92);opacity:0;transition:transform 1s cubic-bezier(.2,.9,.25,1.2), opacity .8s}
+.sym.in .sym-img img{transform:none;opacity:1}
+.sym:hover .sym-img img{transform:translateY(-8px) rotate(-3deg) scale(1.04)}
+.files{display:flex;align-items:center;gap:12px;margin-top:10px;border:1px dashed rgba(255,255,255,.2);border-radius:14px;padding:12px 14px;font-size:14px;color:var(--muted);cursor:pointer;transition:.25s}
+.files:hover{border-color:var(--lime);color:var(--text)}
+.files .plus{width:28px;height:28px;border-radius:50%;background:var(--lime);color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:18px}
+.flist{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.flist span{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:6px 8px 6px 12px;font-size:13px}
+.flist button{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.1);font-size:11px}
+.grid{grid-template-columns:repeat(3,1fr)}
+.tile{aspect-ratio:1/1;background:#F2F1EE}
+.tile.wide{grid-column:1/-1;aspect-ratio:3/1}
+.tile .dl{position:absolute;left:12px;bottom:12px;right:auto;width:auto;height:auto;display:inline-flex;align-items:center;gap:7px;padding:8px 14px 8px 11px;border-radius:999px;background:rgba(20,23,42,.9);color:#fff;font-size:13px;font-weight:600;opacity:0;transform:translateY(6px);transition:.3s;box-shadow:0 8px 20px rgba(20,23,42,.25);backdrop-filter:blur(6px)}
+.tile .dl:hover{background:var(--navy)}
+.tile:hover .dl{opacity:1;transform:none}
+@media (hover:none){.tile .dl{opacity:1;transform:none}}
+.card .obj img,.card .obj svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 22px rgba(0,0,0,.3))}
+@media (max-width:1020px){.now{grid-template-columns:1fr}}
+
+/* RESPONSIVE */
+@media (max-width:1020px){
+  .menu{display:none}
+  .about,.submit,.prize,.faq{grid-template-columns:1fr}
+  .studio{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .symbols{grid-template-columns:1fr}
+  .acts{grid-template-columns:1fr 1fr}
+  .sym{min-height:0}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  .nav-right .ig{display:none}
+  section{padding-top:90px}
+  .rules,form{grid-template-columns:1fr}
+  .tl-track{grid-template-columns:1fr 1fr;row-gap:10px}
+  .tl-line{display:none}
+  .studio{padding:26px;border-radius:28px}
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .box{padding:26px}
+  .stats{gap:12px}
+  .stat{min-height:150px;padding:22px}
+  .tag{display:none}
+  .acts{grid-template-columns:1fr}
+  .act{min-height:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><span class="brand-mark"><img src="" data-img="mark" alt=""></span><span>Taldyk Alumni<small>сообщество выпускников</small></span></a>
+    <nav class="menu" id="menu">
+      <a href="#about">О нас</a>
+      <a href="#do">Что мы делаем</a>
+      <a href="#brief">Бриф</a>
+      <a href="#try">Примерочная</a>
+      <a href="#prize">Приз</a>
+      <a href="#steps">Этапы</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <a class="ig" href="https://www.instagram.com/taldycom/" target="_blank" rel="noopener">Instagram</a>
+      <a href="#submit" class="btn btn-white">Участвовать</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" style="padding-top:46px">
+  <div class="wrap" style="position:relative">
+    <div class="tag" style="left:3%;top:20px;--d:7s;--dx:16px;--dy:-12px;animation-delay:.9s,0s">
+      <svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.6-8.4L21 10z" fill="#C8F135"/></svg><b style="background:#C8F135">2004</b></div>
+    <div class="tag" style="left:7%;top:450px;--d:8.5s;--dx:-12px;--dy:10px;animation-delay:1.1s,0s">
+      <svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.6-8.4L21 10z" fill="#FF6E5A"/></svg><b style="background:#FF6E5A;color:#fff">2011</b></div>
+    <div class="tag" style="right:4%;top:40px;--d:7.5s;--dx:-14px;--dy:12px;animation-delay:1.3s,0s">
+      <svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.6-8.4L21 10z" fill="#17BFA5"/></svg><b style="background:#17BFA5">2019</b></div>
+    <div class="tag" style="right:8%;top:470px;--d:9s;--dx:12px;--dy:-14px;animation-delay:1.5s,0s">
+      <svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.6-8.4L21 10z" fill="#FF9A3C"/></svg><b style="background:#FF9A3C">1998</b></div>
+    <i class="sparkle" style="left:2%;top:290px;animation-delay:.4s"></i>
+    <i class="sparkle" style="right:3%;top:30px;animation-delay:1.4s"></i>
+    <i class="sparkle" style="left:28%;top:10px;animation-delay:2.1s"></i>
+    <i class="sparkle" style="right:20%;top:470px;animation-delay:.9s"></i>
+
+    <div class="pill"><img class="pill-mark" src="" data-img="mark" alt="">Taldyk Alumni объявляет конкурс · приём работ до 20.12</div>
+    <h1><span class="ln"><span>Создай <em>логотип</em></span></span><span class="ln"><span>для нашего сообщества</span></span><span class="ln small"><span>и получи приз от нас</span></span></h1>
+    <p class="sub">Мы, выпускники Талдыкорганского лицея, ищем свой знак. Победитель получит Бокс выпускника, а его логотип появится на мерче 1500 выпускников.</p>
+    <div class="hero-ctas">
+      <button class="btn btn-lime" data-pick>Примерить свой логотип</button>
+      <a href="#brief" class="btn btn-ghost">Читать бриф</a>
+    </div>
+  </div>
+
+  <div class="fan-box" id="fanBox">
+    <div class="fan" id="fan">
+      <div class="float" style="left:-6px;top:4px;--fr:-12deg;animation-delay:-1s;transform-origin:center" id="mega"></div>
+      <div class="float" style="right:-4px;top:0px;--fr:8deg;animation-delay:-2.5s" id="gift"></div>
+
+      <div class="cw" style="--x:85px;--y:110px;--w:260px;--h:450px;--rot:-13deg;--del:.55s">
+        <div class="card" style="--c:var(--violet)" data-goto="try"><h3>Шопер<small>Мерч</small></h3><div class="obj" id="h-hoodie"></div></div></div>
+      <div class="cw" style="--x:310px;--y:52px;--w:260px;--h:450px;--rot:-6.5deg;--del:.65s">
+        <div class="card" style="--c:var(--coral)" data-goto="try"><h3>Кепка<small>Мерч</small></h3><div class="obj" id="h-cap" style="bottom:60px"></div></div></div>
+      <div class="cw" style="--x:780px;--y:52px;--w:260px;--h:450px;--rot:6.5deg;--del:.65s">
+        <div class="card dark-text" style="--c:var(--lime)" data-goto="try"><h3>Значок<small>2 см</small></h3><div class="obj" id="h-badge" style="width:70%;bottom:60px"></div></div></div>
+      <div class="cw" style="--x:1000px;--y:110px;--w:260px;--h:450px;--rot:13deg;--del:.55s">
+        <div class="card" style="--c:var(--blue)" data-goto="try"><h3>Аватар<small>Instagram</small></h3><div class="obj" id="h-phone" style="width:62%;bottom:-70px"></div></div></div>
+      <div class="cw" style="--x:470px;--y:10px;--w:300px;--h:500px;--rot:0deg;--del:.8s">
+        <div class="card center" style="--c:var(--teal)"><h3>Твой знак<small>Примерочная</small></h3><div class="obj" id="h-main"></div>
+          <button class="try" data-pick>Примерить логотип <i>↗</i></button></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="mq" id="mq"></div></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sec-label mono">(01) О сообществе</span><h2>Кто такие<br><em>Taldyk Alumni</em></h2></div>
+      <p class="lead">Сообщество выпускников Талдыкорганского лицея для одарённых мальчиков: бывший КТЛ, сегодня «Білім-инновация».</p>
+    </div>
+    <div class="about">
+      <div class="box about-text reveal">
+        <p>С <b>1993 года</b> лицей окончили около <b>1500 ребят</b>. После выпускного мы не разошлись: встречаемся, играем в футбол, бегаем марафоны, путешествуем и помогаем лицею, который когда-то стал нашим домом.</p>
+        <p>Сегодня мы работаем в разных сферах и странах, но остаёмся на связи. Каждый месяц у нас что-то происходит: от Alumni Talk со спикерами-выпускниками до поздравления наших апай в День повара. Мы растём, и нам нужен свой знак, по которому выпускник любого года узнает своих.</p>
+        <div class="chips">
+          <span class="chip">Медицина</span><span class="chip">IT</span><span class="chip">Инженерия</span><span class="chip">Бизнес</span><span class="chip">Наука</span><span class="chip">Образование</span><span class="chip">Госслужба</span><span class="chip">Спорт</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="box stat lime reveal d1"><div class="num" data-count="1993" data-plain>0</div><div class="cap">год основания лицея</div></div>
+        <div class="box stat reveal d2"><div class="num"><span data-count="1500">0</span>+</div><div class="cap">выпускников по всему миру</div></div>
+        <div class="box stat reveal d3"><div class="num"><span data-count="33">0</span> жыл</div><div class="cap">истории, которая продолжается</div></div>
+        <div class="box stat violet reveal d4"><div class="num"><span data-count="4">0</span></div><div class="cap">языка обучения: қазақша, русский, English, Türkçe</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section id="do">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sec-label mono">(02) Что мы делаем</span><h2>Сообщество,<br>которое <em>живёт</em></h2></div>
+      <div class="counter"><b><span data-count="20">0</span>+</b><span>событий только<br>за осень 2026</span></div>
+    </div>
+    <div class="acts">
+      <div class="act reveal" style="--c:var(--violet)"><div class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9.5" r="2.5"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5M15 14.6c2.6-.3 4.8 1.2 5.5 4"/></svg></div><h3>Встречи</h3><p>Alumni Reunion Day в Талдыкоргане, Welcome party для выпускников 2026 в Астане и Алматы, встречи юбилейных выпусков.</p></div>
+      <div class="act reveal d1" style="--c:var(--teal)"><div class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3M8 21h8"/></svg></div><h3>Alumni Talk</h3><p>Выпускники рассказывают о карьере, ошибках и опыте. Честно, без пафоса, для своих.</p></div>
+      <div class="act reveal d2" style="--c:var(--coral)"><div class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l4 2.9-1.5 4.7h-5L8 10.4z"/><path d="M12 3v4.5M16 10.4l4.4-1.4M14.5 15.1l2.7 3.8M9.5 15.1l-2.7 3.8M8 10.4L3.6 9"/></svg></div><h3>Спорт</h3><p>Football Cup 30+, турнир выпусков 1997-2013, команда AFC Jetisu, Unity League и Almaty Marathon с pasta party накануне.</p></div>
+      <div class="act reveal" style="--c:var(--lime)"><div class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0z"/><path d="M7 6H4a3 3 0 003 4M17 6h3a3 3 0 01-3 4"/></svg></div><h3>Поддержка учеников</h3><p>Помощь в подготовке к олимпиадам, Counseling Day о вузах Казахстана и зарубежья, КВН, Alumni Quiz и Brain Rain.</p></div>
+      <div class="act reveal d1" style="--c:var(--orange)"><div class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg></div><h3>Спасибо нашим людям</h3><p>День учителя в Талдыкоргане, поздравление апай в День повара, День технического персонала, проводы на пенсию.</p></div>
+      <div class="act reveal d2" style="--c:var(--blue)"><div class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-13 4 8 3-5 5 10z"/><circle cx="17" cy="5" r="1.6"/></svg></div><h3>Поездки</h3><p>Актау, Китай, Джунгарский Алатау. Едем вместе туда, куда в лицее мечтали поехать.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BRIEF -->
+<section id="brief">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sec-label mono">(03) Бриф</span><h2>Наш знак сегодня<br>и <em>что дальше</em></h2></div>
+      <p class="lead">Бриф помогает участникам понять, от чего оттолкнуться и где будет жить новый знак. Это ориентиры, а не жёсткие правила.</p>
+    </div>
+    <div class="now">
+      <div class="now-logo reveal"><img src="" data-img="logoFull" alt="Нынешний логотип TALDYCOM"></div>
+      <div class="box now-text reveal d1">
+        <span class="mono" style="color:var(--lime)">Сейчас</span>
+        <h3>Это наш нынешний логотип</h3>
+        <p>Дерево с рукой вместо ствола: рост, поддержка и корни, которые держат нас вместе. Он остаётся частью нашей истории.</p>
+        <p>Новый знак может развить идею дерева, переосмыслить её или быть совсем другим. Главное, чтобы выпускник любого года сразу узнал в нём своих: на худи, значке, аватарке и сцене встречи выпускников.</p>
+      </div>
+    </div>
+    <p class="mono ideas-label reveal">Идеи для вдохновения</p>
+    <div class="symbols">
+      <div class="box sym reveal"><span class="num">1</span><div class="sym-img"><img src="" data-img="tree" alt="Тал"></div>
+        <h3>Тал<em>ива</em></h3><p>Корень названия Талдыкорган. Корни, рост, преемственность поколений.</p></div>
+      <div class="box sym reveal d1"><span class="num">2</span><div class="sym-img"><img src="" data-img="rivers" alt="Жетісу"></div>
+        <h3>Жетісу<em>семь рек</em></h3><p>Один исток и много дорог. Выпускники разъехались по миру, но начали в одном месте.</p></div>
+      <div class="box sym reveal d2"><span class="num">3</span><div class="sym-img"><img src="" data-img="shan" alt="Шаңырақ"></div>
+        <h3>Шаңырақ<em>общий дом</em></h3><p>Интернат был нашим домом. Шаңырақ про единство и то, что держит нас вместе.</p></div>
+    </div>
+    <div class="rules">
+      <div class="box reveal"><h4>Что важно</h4>
+        <ul>
+          <li>Работает в одном цвете, на светлом и тёмном фоне</li>
+          <li>Читается на значке размером 2 см</li>
+          <li>Подходит для печати DTF и вышивки</li>
+          <li>Есть версия с надписью «Taldyk Alumni»</li>
+          <li>Можно использовать нейросети и любые инструменты</li>
+        </ul></div>
+      <div class="box no reveal d1"><h4>Чего не делать</h4>
+        <ul class="no">
+          <li>Копировать логотип лицея или фонда «Білім-инновация»</li>
+          <li>Выдавать чужие работы за свои</li>
+          <li>Использовать политическую и религиозную символику</li>
+        </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRY-ON -->
+<section id="try">
+  <div class="wrap">
+    <div class="studio reveal">
+      <div>
+        <span class="sec-label mono">(04) Примерочная</span>
+        <h2>Посмотри знак <em>в деле</em></h2>
+        <p class="lead">Загрузи логотип и сразу увидишь его на мерче. Файл никуда не отправляется, пока ты сам не нажмёшь «Отправить».</p>
+        <div class="drop" id="drop" data-pick>
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg></div>
+          <b>Перетащи логотип сюда</b><span>или нажми, чтобы выбрать · PNG без фона или SVG лучше всего</span>
+        </div>
+        <div class="file-chip" id="chip"><img id="chipImg" alt=""><div class="nm" id="chipName"></div><button id="chipX" aria-label="Убрать">✕</button></div>
+        <div class="ctrl"><label>Размер логотипа</label><input type="range" id="scale" min="60" max="140" value="100"></div>
+        <div class="studio-actions">
+          <button class="btn btn-dark" id="dlAll">Скачать мокапы</button>
+          <a href="#submit" class="btn btn-white">Отправить работу →</a>
+        </div>
+        <p class="note" id="dlNote">Скачается один PNG со всеми мокапами. Каждый мокап можно скачать и отдельно.</p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBMIT -->
+<section id="submit">
+  <div class="wrap">
+    <div class="submit">
+      <div class="reveal">
+        <span class="sec-label mono">(05) Подача работы</span>
+        <h2>Отправь свой<br><em>вариант</em></h2>
+        <p class="lead" style="margin-top:18px">Можно подать до 3 работ. Мокапы из примерочной прикрепятся к заявке автоматически.</p>
+        <div class="steps-mini">
+          <div><b>1</b>Прочитай бриф</div>
+          <div><b>2</b>Примерь знак на мерче</div>
+          <div><b>3</b>Заполни заявку и прикрепи файлы</div>
+          <div><b>4</b>Жди шорт-лист 24.12</div>
+        </div>
+      </div>
+      <div class="box reveal d1">
+        <form id="form" novalidate>
+          <div class="f"><label>Имя и фамилия <i>*</i></label><input name="name" required placeholder="Айбек Серикулы"></div>
+          <div class="f"><label>Год выпуска <i>*</i></label><select name="year" required id="yearSel"><option value="">Выбери год</option></select></div>
+          <div class="f"><label>Телефон или WhatsApp <i>*</i></label><input name="phone" required placeholder="+7 7__ ___ __ __"></div>
+          <div class="f"><label>Instagram</label><input name="ig" placeholder="@username"></div>
+          <div class="f full"><label>Город и сфера работы</label><input name="city" placeholder="Алматы, IT"></div>
+          <div class="f full"><label>Идея знака: что он означает <i>*</i></label><textarea name="idea" required placeholder="Коротко расскажи, какую историю несёт твой знак"></textarea></div>
+          <div class="f full"><label>Файлы работы <i>*</i> · любой формат: PNG, SVG, PDF, AI, ZIP</label>
+            <div class="attach" id="attach"><img id="attImg" alt=""><span id="attText">Логотип из примерочной ещё не загружен</span><button type="button" data-pick>Примерить</button></div>
+            <label class="files" id="filesBox"><input type="file" id="files" multiple hidden><span class="plus">+</span><span id="filesText">Добавить файлы работы</span></label>
+            <div class="flist" id="flist"></div></div>
+          <input name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+          <label class="check f full" id="agreeWrap"><input type="checkbox" name="agree" required><span>Я выпускник лицея и согласен с правилами: в случае победы права на знак переходят сообществу Taldyk Alumni, автор указывается.</span></label>
+          <button class="btn btn-lime" type="submit">Отправить работу <span class="arr">↗</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIZE -->
+<section id="prize">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sec-label mono">(06) Приз</span><h2>Бокс <em>выпускника</em></h2></div>
+      <p class="lead">Автор лучшего знака получит первый мерч Taldyk Alumni со своим же логотипом.</p>
+    </div>
+    <div class="prize">
+      <div class="box prize-vis reveal" id="prizeVis"></div>
+      <div class="box prize-list reveal d1">
+        <h3>Что внутри</h3>
+        <ul class="items">
+          <li>Худи с новым знаком <span>№001</span></li>
+          <li>Кепка <span>Мерч</span></li>
+          <li>Термокружка <span>Мерч</span></li>
+          <li>Блокнот <span>A5</span></li>
+          <li>Стикерпак и значки <span>Сет</span></li>
+          <li>Именной сертификат автора <span>Подпись</span></li>
+        </ul>
+        <p class="bonus"><b>+</b> имя автора на сайте и в Instagram @taldycom, вручение на встрече выпускников.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section id="steps">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sec-label mono">(07) Как выбираем</span><h2>Жюри + <em>голос</em><br>выпускников</h2></div>
+      <p class="lead">Честно и прозрачно: профессиональный взгляд жюри и голос самого сообщества.</p>
+    </div>
+    <div class="tl reveal" id="tl">
+      <div class="tl-track">
+        <div class="tl-line"><i></i></div>
+        <div class="st"><span class="mono">25.11 · 20.12</span><h4>Приём работ</h4><p>Подаём до 3 работ через форму на сайте.</p></div>
+        <div class="st"><span class="mono">21.12 · 24.12</span><h4>Жюри: топ-5</h4><p>Жюри из выпускников и учителей выбирает пять финалистов.</p></div>
+        <div class="st"><span class="mono">25.12 · 29.12</span><h4>Голосование</h4><p>Выпускники голосуют за финалистов в @taldycom.</p></div>
+        <div class="st"><span class="mono">30.12</span><h4>Победитель</h4><p>Объявляем автора нового знака Taldyk Alumni.</p></div>
+      </div>
+      <div class="score">
+        <div class="a"><b>50%</b>оценка жюри</div>
+        <div class="b"><b>50%</b>голосование выпускников</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq">
+    <div class="reveal"><span class="sec-label mono">(08) FAQ</span><h2>Частые<br><em>вопросы</em></h2>
+      <p class="lead" style="margin-top:18px">Не нашёл ответ? Пиши в Direct <a href="https://www.instagram.com/taldycom/" target="_blank" rel="noopener" style="color:var(--lime)">@taldycom</a>.</p></div>
+    <div class="reveal d1" id="faqList"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="big"><img src="" data-img="mark" alt="">Taldyk <em>Alumni</em></div>
+    <div class="foot"><span>С уважением, команда Taldyk Alumni · сообщество выпускников Талдыкорганского КТЛ / БИЛ · 2026</span><span>Instagram: <a href="https://www.instagram.com/taldycom/" target="_blank" rel="noopener">@taldycom</a></span></div>
+  </div>
+</footer>
+
+<input type="file" id="file" hidden>
+<div class="modal" id="modal"><div class="m"><div class="badge">✓</div><h3 id="mTitle">Заявка готова</h3><p id="mText"></p><button class="btn btn-lime" id="mClose">Понятно</button></div></div>
+<div class="toast" id="toast"><i></i><span id="toastText"></span></div>
+
+<script src="assets.js"></script>
+<script>
+(() => {
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const state = { logo:null, name:'', color:'navy', scale:1 };
+const FAB = {
+  navy:{a:'#2A3A72',b:'#18214A',c:'#121939',ink:'#FFFFFF'},
+  white:{a:'#FFFFFF',b:'#E4E4E0',c:'#CFCFCA',ink:'#14172A'},
+  black:{a:'#34343A',b:'#1C1C20',c:'#111114',ink:'#FFFFFF'}
+};
+let uidN = 0; const uid = () => 'u' + (++uidN);
+
+/* ---------- logo placement ---------- */
+function logo(x,y,w,h,f,opt={}){
+  const s = opt.noScale ? 1 : state.scale;
+  const cw = w*s, ch = h*s, cx = x + (w-cw)/2, cy = y + (h-ch)/2;
+  if(state.logo){
+    const filt = opt.filter ? ` filter="url(#${opt.filter})"` : '';
+    return `<image href="${state.logo}" x="${cx}" y="${cy}" width="${cw}" height="${ch}" preserveAspectRatio="xMidYMid meet"${filt} style="mix-blend-mode:${opt.blend||'normal'}"/>`;
+  }
+  const r = Math.min(w,h)/2*.92, mx = x+w/2, my = y+h/2;
+  return `<circle cx="${mx}" cy="${my}" r="${r}" fill="none" stroke="${f.ink}" stroke-opacity=".55" stroke-width="${Math.max(1.5,r/18)}" stroke-dasharray="${r/5} ${r/6}"/>
+  <text x="${mx}" y="${my + r*.36}" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="${r*1.05}" fill="${f.ink}" fill-opacity=".6">?</text>`;
+}
+
+/* ---------- objects (own viewBoxes) ---------- */
+function fx(p){
+  return `<filter id="${p}g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="2" seed="3" result="n"/><feColorMatrix in="n" type="saturate" values="0" result="m"/><feComposite in="SourceGraphic" in2="m" operator="arithmetic" k1="0" k2="1" k3=".05" k4="-.025" result="c"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+  <filter id="${p}w" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="9" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="3.5" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="${p}b" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7"/></filter>
+  <filter id="${p}s" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>`;
+}
+const isLight = f => f.a === '#FFFFFF' || f.a === '#F1EBDD';
+function print(x,y,w,h,f,p){
+  // printed logo: slight fabric warp, multiply on light fabric so white backgrounds vanish
+  return `<g filter="url(#${p}w)" style="mix-blend-mode:${isLight(f)?'multiply':'normal'}" opacity="${isLight(f)?1:.96}">${logo(x,y,w,h,f)}</g>`;
+}
+function hoodie(f, opt={}){
+  const p = uid();
+  const body = "M96 62 Q150 46 204 62 L250 84 Q268 92 274 112 L296 236 Q298 250 286 253 L258 258 Q248 259 246 248 L236 172 L240 292 Q240 304 228 305 L72 305 Q60 304 60 292 L64 172 L54 248 Q52 259 42 258 L14 253 Q2 250 4 236 L26 112 Q32 92 50 84Z";
+  const dk = isLight(f) ? '#6B6B78' : '#000';
+  return `<svg viewBox="0 0 300 330" xmlns="http://www.w3.org/2000/svg">
+  <defs>${fx(p)}
+  <linearGradient id="${p}L" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${f.a}"/><stop offset="1" stop-color="${f.b}"/></linearGradient>
+  <radialGradient id="${p}H" cx=".38" cy=".22" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".2"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <clipPath id="${p}c"><path d="${body}"/></clipPath>
+  <pattern id="${p}r" width="4" height="10" patternUnits="userSpaceOnUse"><rect width="2" height="10" fill="${dk}" opacity=".12"/></pattern></defs>
+  <ellipse cx="150" cy="314" rx="128" ry="9" fill="#000" opacity=".28" filter="url(#${p}s)"/>
+  <path d="M98 64 Q100 18 150 16 Q200 18 202 64 Q176 94 150 96 Q124 94 98 64Z" fill="${f.b}" filter="url(#${p}g)"/>
+  <path d="M104 40 Q150 10 196 40" stroke="${dk}" stroke-opacity=".18" stroke-width="5" fill="none" filter="url(#${p}b)"/>
+  <path d="${body}" fill="url(#${p}L)" filter="url(#${p}g)"/>
+  ${print(112,118,76,72,f,p)}
+  <g clip-path="url(#${p}c)" fill="none" stroke-linecap="round">
+    <path d="M74 178 Q84 236 76 296" stroke="${dk}" stroke-opacity=".28" stroke-width="16" filter="url(#${p}b)"/>
+    <path d="M226 178 Q216 236 224 296" stroke="${dk}" stroke-opacity=".28" stroke-width="16" filter="url(#${p}b)"/>
+    <path d="M62 170 Q92 158 108 120" stroke="${dk}" stroke-opacity=".3" stroke-width="12" filter="url(#${p}b)"/>
+    <path d="M238 170 Q208 158 192 120" stroke="${dk}" stroke-opacity=".3" stroke-width="12" filter="url(#${p}b)"/>
+    <path d="M30 120 Q22 180 14 244" stroke="#fff" stroke-opacity=".12" stroke-width="10" filter="url(#${p}b)"/>
+    <path d="M124 104 Q116 190 128 276" stroke="#fff" stroke-opacity=".14" stroke-width="22" filter="url(#${p}b)"/>
+    <path d="M90 200 Q150 214 210 200" stroke="${dk}" stroke-opacity=".12" stroke-width="10" filter="url(#${p}b)"/>
+    <path d="M150 96 L150 220" stroke="${dk}" stroke-opacity=".08" stroke-width="18" filter="url(#${p}b)"/>
+  </g>
+  <path d="${body}" fill="url(#${p}H)"/>
+  <path d="M6 232 L54 240 L52 256 Q50 259 42 258 L14 253 Q4 251 4 240Z" fill="${f.c}"/><path d="M6 232 L54 240 L52 256 Q50 259 42 258 L14 253 Q4 251 4 240Z" fill="url(#${p}r)"/>
+  <path d="M294 232 L246 240 L248 256 Q250 259 258 258 L286 253 Q296 251 296 240Z" fill="${f.c}"/><path d="M294 232 L246 240 L248 256 Q250 259 258 258 L286 253 Q296 251 296 240Z" fill="url(#${p}r)"/>
+  <path d="M61 282 L239 282 L240 292 Q240 304 228 305 L72 305 Q60 304 60 292Z" fill="${f.c}"/><path d="M61 282 L239 282 L240 292 Q240 304 228 305 L72 305 Q60 304 60 292Z" fill="url(#${p}r)"/>
+  <path d="M96 222 L204 222 Q214 222 218 232 L228 270 L72 270 L82 232 Q86 222 96 222Z" fill="${dk}" opacity=".07"/>
+  <path d="M82 232 Q86 222 96 222 L204 222 Q214 222 218 232" stroke="${dk}" stroke-opacity=".25" stroke-width="2" fill="none"/>
+  <path d="M86 226 L80 268 M214 226 L220 268" stroke="${dk}" stroke-opacity=".2" stroke-width="2" stroke-dasharray="3 3"/>
+  <path d="M108 66 Q112 34 150 32 Q188 34 192 66 Q172 86 150 88 Q128 86 108 66Z" fill="${isLight(f)?'#BDBDBB':f.c}"/>
+  <path d="M112 64 Q118 44 150 42 Q182 44 188 64" stroke="#000" stroke-opacity=".25" stroke-width="10" fill="none" filter="url(#${p}b)"/>
+  <path d="M108 66 Q128 92 150 96 Q172 92 192 66" fill="none" stroke="${f.a}" stroke-width="7" stroke-linecap="round"/>
+  <path d="M108 66 Q128 92 150 96 Q172 92 192 66" fill="none" stroke="${dk}" stroke-opacity=".2" stroke-width="2"/>
+  <path d="M138 96 Q135 120 140 146 M162 96 Q166 120 160 146" stroke="${isLight(f)?'#9C9DA8':'#E4E4EA'}" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+  <rect x="137" y="143" width="6" height="10" rx="2" fill="#B8B9C2"/><rect x="157" y="143" width="6" height="10" rx="2" fill="#B8B9C2"/>
+  ${opt.num?`<text x="150" y="216" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="${f.ink}" opacity=".6">№001</text>`:''}
+  </svg>`;
+}
+function cap(f){
+  const p = uid();
+  const crown = "M58 150 Q52 50 150 42 Q248 50 242 150 Q150 132 58 150Z";
+  const dk = isLight(f) ? '#6B6B78' : '#000';
+  return `<svg viewBox="0 0 300 215" xmlns="http://www.w3.org/2000/svg">
+  <defs>${fx(p)}
+  <linearGradient id="${p}L" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${f.a}"/><stop offset="1" stop-color="${f.b}"/></linearGradient>
+  <radialGradient id="${p}V" cx=".45" cy=".45" r=".62"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="${isLight(f)?.22:.45}"/></radialGradient>
+  <radialGradient id="${p}H" cx=".4" cy=".15" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".3"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <linearGradient id="${p}B" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${f.b}"/><stop offset="1" stop-color="${f.c}"/></linearGradient></defs>
+  <ellipse cx="150" cy="198" rx="130" ry="9" fill="#000" opacity=".3" filter="url(#${p}s)"/>
+  <path d="M40 148 Q150 126 262 148 Q298 158 284 178 Q240 198 150 188 Q60 198 18 178 Q4 160 40 148Z" fill="url(#${p}B)" filter="url(#${p}g)"/>
+  <path d="M40 160 Q150 142 262 160" stroke="#000" stroke-opacity=".35" stroke-width="10" fill="none" filter="url(#${p}b)"/>
+  <path d="M30 172 Q150 196 272 172" stroke="${dk}" stroke-opacity=".3" stroke-width="2" stroke-dasharray="3 3" fill="none"/>
+  <path d="${crown}" fill="url(#${p}L)" filter="url(#${p}g)"/>
+  ${print(114,72,72,54,f,p)}
+  <path d="${crown}" fill="url(#${p}V)"/>
+  <path d="${crown}" fill="url(#${p}H)"/>
+  <path d="M150 42 Q116 70 102 142 M150 42 Q184 70 198 142" stroke="${dk}" stroke-opacity=".28" stroke-width="2" fill="none"/>
+  <path d="M150 42 Q114 72 100 142 M150 42 Q186 72 200 142" stroke="#fff" stroke-opacity=".12" stroke-width="2" fill="none" transform="translate(2 0)"/>
+  <path d="M70 138 Q150 124 230 138" stroke="${dk}" stroke-opacity=".3" stroke-width="2" stroke-dasharray="3 3" fill="none"/>
+  <ellipse cx="150" cy="44" rx="11" ry="5" fill="${f.c}"/><ellipse cx="150" cy="43" rx="7" ry="3" fill="#fff" opacity=".2"/>
+  <circle cx="110" cy="70" r="2" fill="${dk}" opacity=".35"/><circle cx="190" cy="70" r="2" fill="${dk}" opacity=".35"/>
+  </svg>`;
+}
+function badge(f){
+  const p = uid(), cl = uid();
+  return `<svg viewBox="0 0 240 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>${fx(p)}
+  <radialGradient id="${p}G" cx=".32" cy=".26" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".7"/><stop offset=".35" stop-color="#fff" stop-opacity=".12"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <radialGradient id="${p}E" cx=".5" cy=".5" r=".5"><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></radialGradient>
+  <linearGradient id="${p}R" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FAFAFC"/><stop offset=".5" stop-color="#C3C5CF"/><stop offset="1" stop-color="#7E8090"/></linearGradient>
+  <clipPath id="${cl}"><circle cx="120" cy="120" r="93"/></clipPath></defs>
+  <ellipse cx="128" cy="226" rx="88" ry="10" fill="#000" opacity=".35" filter="url(#${p}s)"/>
+  <circle cx="120" cy="122" r="102" fill="#000" opacity=".2" filter="url(#${p}b)"/>
+  <circle cx="120" cy="120" r="101" fill="url(#${p}R)"/>
+  <circle cx="120" cy="120" r="94" fill="${f.a}"/>
+  <g clip-path="url(#${cl})"><g style="mix-blend-mode:${isLight(f)?'multiply':'normal'}">${logo(64,64,112,112,f)}</g></g>
+  <circle cx="120" cy="120" r="94" fill="url(#${p}E)"/>
+  <circle cx="120" cy="120" r="94" fill="url(#${p}G)"/>
+  <path d="M52 70 Q80 34 128 30" stroke="#fff" stroke-opacity=".7" stroke-width="5" stroke-linecap="round" fill="none" filter="url(#${p}b)"/>
+  </svg>`;
+}
+function tote(f){
+  const p = uid();
+  const cv = f.a==='#FFFFFF' ? {a:'#F1EBDD',b:'#E4DAC6',c:'#CDBFA3',ink:'#14172A'} : f;
+  const dk = isLight(cv) ? '#6B5D45' : '#000';
+  const bag = "M28 88 L232 88 L246 294 Q246 302 238 302 L22 302 Q14 302 14 294Z";
+  return `<svg viewBox="0 0 260 318" xmlns="http://www.w3.org/2000/svg">
+  <defs>${fx(p)}
+  <filter id="${p}t" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .25" numOctaves="2" seed="4" result="n"/><feColorMatrix in="n" type="saturate" values="0" result="m"/><feComposite in="SourceGraphic" in2="m" operator="arithmetic" k1="0" k2="1" k3=".18" k4="-.09" result="c"/><feComposite in="c" in2="SourceGraphic" operator="in"/></filter>
+  <linearGradient id="${p}L" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${cv.a}"/><stop offset="1" stop-color="${cv.b}"/></linearGradient>
+  <clipPath id="${p}c"><path d="${bag}"/></clipPath></defs>
+  <ellipse cx="130" cy="306" rx="118" ry="8" fill="#000" opacity=".3" filter="url(#${p}s)"/>
+  <path d="M80 98 Q76 14 130 14 Q184 14 180 98" fill="none" stroke="${cv.b}" stroke-width="14" stroke-linecap="round" filter="url(#${p}t)"/>
+  <path d="M80 98 Q76 14 130 14 Q184 14 180 98" fill="none" stroke="${dk}" stroke-opacity=".18" stroke-width="2" stroke-dasharray="2 3"/>
+  <path d="${bag}" fill="url(#${p}L)" filter="url(#${p}t)"/>
+  ${print(70,140,120,120,cv,p)}
+  <g clip-path="url(#${p}c)" fill="none">
+    <path d="M60 100 Q70 200 50 300" stroke="${dk}" stroke-opacity=".18" stroke-width="18" filter="url(#${p}b)"/>
+    <path d="M206 100 Q196 200 214 300" stroke="${dk}" stroke-opacity=".16" stroke-width="16" filter="url(#${p}b)"/>
+    <path d="M110 100 Q104 200 116 300" stroke="#fff" stroke-opacity=".22" stroke-width="22" filter="url(#${p}b)"/>
+    <path d="M20 296 L240 296" stroke="${dk}" stroke-opacity=".25" stroke-width="10" filter="url(#${p}b)"/>
+  </g>
+  <path d="M28 88 L232 88 L233 104 L27 104Z" fill="${dk}" opacity=".08"/>
+  <path d="M28 104 L232 104" stroke="${dk}" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <rect x="70" y="86" width="20" height="24" rx="3" fill="${cv.b}" filter="url(#${p}t)"/><rect x="170" y="86" width="20" height="24" rx="3" fill="${cv.b}" filter="url(#${p}t)"/>
+  <path d="M72 98 L88 108 M88 98 L72 108 M172 98 L188 108 M188 98 L172 108" stroke="${dk}" stroke-opacity=".3" stroke-width="1.2"/>
+  </svg>`;
+}
+function phone(f){
+  const cl = uid(), g = uid(), p = uid();
+  return `<svg viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg">
+  <defs>${fx(p)}<clipPath id="${cl}"><circle cx="110" cy="128" r="50"/></clipPath>
+  <linearGradient id="${g}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB84D"/><stop offset=".5" stop-color="#F0367A"/><stop offset="1" stop-color="#8B3CF0"/></linearGradient>
+  <linearGradient id="${g}f" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3A3B45"/><stop offset=".5" stop-color="#16171E"/><stop offset="1" stop-color="#3A3B45"/></linearGradient>
+  <linearGradient id="${g}s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+  <ellipse cx="114" cy="428" rx="90" ry="8" fill="#000" opacity=".35" filter="url(#${p}s)"/>
+  <rect x="2" y="2" width="216" height="416" rx="38" fill="url(#${g}f)"/>
+  <rect x="6" y="6" width="208" height="408" rx="34" fill="#0E0F14"/>
+  <rect x="12" y="12" width="196" height="396" rx="28" fill="#FFFFFF"/>
+  <rect x="78" y="20" width="64" height="18" rx="9" fill="#0E0F14"/>
+  <text x="24" y="30" font-family="Arial" font-weight="700" font-size="9" fill="#111">9:41</text>
+  <text x="26" y="64" font-family="Arial" font-weight="700" font-size="16" fill="#111">‹</text>
+  <text x="110" y="63" text-anchor="middle" font-family="Arial" font-weight="700" font-size="13" fill="#111">taldyk_alumni</text>
+  <circle cx="110" cy="128" r="57" fill="none" stroke="url(#${g})" stroke-width="4"/>
+  <circle cx="110" cy="128" r="50" fill="${f.a}"/>
+  <g clip-path="url(#${cl})"><g style="mix-blend-mode:${isLight(f)?'multiply':'normal'}">${logo(72,90,76,76,f)}</g></g>
+  <text x="110" y="208" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#111">Taldyk Alumni</text>
+  <text x="110" y="226" text-anchor="middle" font-family="Arial" font-size="11" fill="#777">Сообщество выпускников · КТЛ / БИЛ</text>
+  <g font-family="Arial" text-anchor="middle"><text x="52" y="264" font-weight="700" font-size="15" fill="#111">1500</text><text x="52" y="280" font-size="9" fill="#888">выпускников</text>
+  <text x="110" y="264" font-weight="700" font-size="15" fill="#111">33</text><text x="110" y="280" font-size="9" fill="#888">года</text>
+  <text x="168" y="264" font-weight="700" font-size="15" fill="#111">1993</text><text x="168" y="280" font-size="9" fill="#888">с года</text></g>
+  <rect x="26" y="298" width="80" height="28" rx="8" fill="#0095F6"/><text x="66" y="316" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="#fff">Подписаться</text>
+  <rect x="114" y="298" width="80" height="28" rx="8" fill="#EFEFF2"/><text x="154" y="316" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="#111">Сообщение</text>
+  <rect x="12" y="338" width="64" height="64" fill="#C8F135"/><rect x="78" y="338" width="64" height="64" fill="#8B6CFF"/><rect x="144" y="338" width="64" height="64" fill="#17BFA5"/>
+  <rect x="2" y="2" width="216" height="416" rx="38" fill="url(#${g}s)"/>
+  </svg>`;
+}
+function banner(f){
+  const p = uid();
+  return `<svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>${fx(p)}
+  <linearGradient id="${p}L" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${f.a}"/><stop offset="1" stop-color="${f.b}"/></linearGradient>
+  <linearGradient id="${p}P" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E6E7EC"/><stop offset=".5" stop-color="#9A9CA8"/><stop offset="1" stop-color="#6E7080"/></linearGradient>
+  <linearGradient id="${p}F" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".18"/><stop offset=".2" stop-color="#fff" stop-opacity=".08"/><stop offset=".45" stop-color="#000" stop-opacity=".12"/><stop offset=".7" stop-color="#fff" stop-opacity=".1"/><stop offset="1" stop-color="#000" stop-opacity=".2"/></linearGradient></defs>
+  <ellipse cx="260" cy="250" rx="240" ry="7" fill="#000" opacity=".25" filter="url(#${p}s)"/>
+  <rect x="14" y="10" width="9" height="240" rx="4" fill="url(#${p}P)"/><rect x="497" y="10" width="9" height="240" rx="4" fill="url(#${p}P)"/>
+  <g>
+  <path d="M23 26 Q260 34 497 26 L497 196 Q260 206 23 196Z" fill="url(#${p}L)" filter="url(#${p}g)"/>
+  <g style="mix-blend-mode:${isLight(f)?'multiply':'normal'}">${logo(50,52,124,124,f)}</g>
+  <text x="200" y="108" font-family="Arial" font-weight="900" font-size="38" fill="${f.ink}" letter-spacing="-1">TALDYK</text>
+  <text x="200" y="148" font-family="Arial" font-weight="900" font-size="38" fill="${f.ink}" letter-spacing="-1">ALUMNI</text>
+  <text x="202" y="176" font-family="Arial" font-size="14" fill="${f.ink}" opacity=".7">Түлектер кездесуі · Встреча выпускников</text>
+  <path d="M23 26 Q260 34 497 26 L497 196 Q260 206 23 196Z" fill="url(#${p}F)"/>
+  </g>
+  <circle cx="30" cy="30" r="4" fill="#C9CAD2"/><circle cx="490" cy="30" r="4" fill="#C9CAD2"/><circle cx="30" cy="190" r="4" fill="#C9CAD2"/><circle cx="490" cy="190" r="4" fill="#C9CAD2"/>
+  </svg>`;
+}
+function mono(){
+  const fb = uid(), fw = uid();
+  const fk = {a:'#fff',b:'#fff',c:'#fff',ink:'#14172A'}, fd = {a:'#14172A',b:'#14172A',c:'#14172A',ink:'#FFFFFF'};
+  const L = (x,y,w,h,ff,fid) => logo(x,y,w,h,ff,{filter:state.logo?fid:null,noScale:true});
+  return `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="${fb}"><feFlood flood-color="#14172A"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+  <filter id="${fw}"><feFlood flood-color="#FFFFFF"/><feComposite in2="SourceAlpha" operator="in"/></filter></defs>
+  <rect width="200" height="300" fill="#FFFFFF"/><rect x="200" width="200" height="300" fill="#14172A"/>
+  ${L(40,60,120,120,fk,fb)}${L(240,60,120,120,fd,fw)}
+  <g>${L(48,214,40,40,fk,fb)}${L(102,222,24,24,fk,fb)}${L(140,228,12,12,fk,fb)}</g>
+  <g>${L(248,214,40,40,fd,fw)}${L(302,222,24,24,fd,fw)}${L(340,228,12,12,fd,fw)}</g>
+  </svg>`;
+}
+function mug(){
+  return `<svg viewBox="0 0 160 170" xmlns="http://www.w3.org/2000/svg">
+  <path d="M120 50 Q156 50 154 86 Q152 120 116 118" fill="none" stroke="#E4E4E0" stroke-width="14"/>
+  <path d="M14 30 L126 30 L118 156 Q117 166 106 166 L34 166 Q23 166 22 156Z" fill="#FFFFFF"/>
+  <path d="M14 30 L126 30 L118 156 Q117 166 106 166 L34 166 Q23 166 22 156Z" fill="#000" opacity=".04"/>
+  <ellipse cx="70" cy="30" rx="56" ry="10" fill="#E4E4E0"/><ellipse cx="70" cy="30" rx="48" ry="7" fill="#14172A"/>
+  ${logo(38,66,64,64,{ink:'#14172A'},{noScale:true})}
+  </svg>`;
+}
+function megaphone(){
+  return `<svg width="150" height="130" viewBox="0 0 150 130" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="mgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#C9CAD4"/></linearGradient></defs>
+  <path d="M20 58 L92 18 Q104 12 108 26 L118 90 Q120 104 106 102 L30 88Z" fill="url(#mgA)"/>
+  <ellipse cx="112" cy="60" rx="12" ry="40" transform="rotate(-10 112 60)" fill="#E2E3EA"/>
+  <ellipse cx="112" cy="60" rx="7" ry="30" transform="rotate(-10 112 60)" fill="#9C9EAB"/>
+  <rect x="6" y="54" width="30" height="40" rx="10" fill="#C8F135" transform="rotate(-10 20 74)"/>
+  <path d="M42 88 L52 120 Q54 126 60 124 L68 120 Q72 117 70 112 L62 92" fill="#B9BACA"/>
+  <rect x="128" y="22" width="18" height="6" rx="3" fill="#C8F135" transform="rotate(-35 137 25)"/>
+  <rect x="132" y="54" width="18" height="6" rx="3" fill="#C8F135"/>
+  <rect x="128" y="86" width="18" height="6" rx="3" fill="#C8F135" transform="rotate(35 137 89)"/>
+  </svg>`;
+}
+function giftSmall(){
+  return `<svg width="130" height="130" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+  <rect x="16" y="56" width="98" height="66" rx="10" fill="#F1F1F4"/><rect x="16" y="56" width="98" height="66" rx="10" fill="#000" opacity=".05"/>
+  <rect x="10" y="40" width="110" height="24" rx="8" fill="#FFFFFF"/>
+  <rect x="57" y="40" width="16" height="82" fill="#C8F135"/>
+  <path d="M65 40 Q40 10 30 26 Q24 40 65 40 Q90 10 100 26 Q106 40 65 40Z" fill="none" stroke="#C8F135" stroke-width="9" stroke-linejoin="round"/>
+  </svg>`;
+}
+
+/* ---------- photo mockups ---------- */
+const IMG = window.IMG || {};
+const PM = {
+  hoodie:{name:'Худи', bg:'#ECEAF3', r:[0.4003,0.5223,0.1994,0.1140], light:true, bb:[121,35,1114,1188]},
+  cap:{name:'Кепка', bg:'#F3ECE9', r:[0.4027,0.3349,0.1954,0.1435], light:true, bb:[212,205,1035,960]},
+  badge:{name:'Значок', bg:'#E8F1EF', r:[0.2807,0.2847,0.4147,0.4147], light:true, bb:[213,203,1012,1031], circle:[0.4880,0.4920,0.315]},
+  tote:{name:'Шопер', bg:'#F2EEE6', r:[0.3485,0.5183,0.3030,0.3030], light:true, bb:[305,46,949,1190]},
+  mug:{name:'Кружка', bg:'#E9EDF4', r:[0.3030,0.3748,0.2791,0.2871], light:true, bb:[265,293,1105,1003]},
+};
+function photoSVG(k, opt={}){
+  const m = PM[k], S = 800, p = uid();
+  const [rx,ry,rw,rh] = m.r.map(v=>v*S);
+  const f = m.light ? {ink:'#14172A'} : {ink:'#FFFFFF'};
+  const bb = m.bb.map(v=>v/1254*S);
+  const vb = opt.crop ? `${bb[0]-12} ${bb[1]-12} ${bb[2]-bb[0]+24} ${bb[3]-bb[1]+24}` : `0 0 ${S} ${S}`;
+  const clip = m.circle ? `<clipPath id="${p}c"><circle cx="${m.circle[0]*S}" cy="${m.circle[1]*S}" r="${m.circle[2]*S}"/></clipPath>` : '';
+  const lg = logo(rx,ry,rw,rh,f);
+  const shade = state.logo ? `<mask id="${p}m" maskUnits="userSpaceOnUse" x="0" y="0" width="${S}" height="${S}"><g filter="url(#${p}wh)">${lg}</g></mask>` : '';
+  return `<svg viewBox="${vb}" xmlns="http://www.w3.org/2000/svg">
+  <defs>${clip}<filter id="${p}w" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="5" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="${m.light?1.5:2.5}" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="${p}wh"><feFlood flood-color="#fff"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+  <filter id="${p}s" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>${shade}</defs>
+  ${opt.bg!==false?`<rect x="0" y="0" width="${S}" height="${S}" fill="${m.bg}"/>`:''}
+  <ellipse cx="${(bb[0]+bb[2])/2}" cy="${bb[3]-4}" rx="${(bb[2]-bb[0])*.42}" ry="${S*.018}" fill="#000" opacity=".28" filter="url(#${p}s)"/>
+  <image href="${IMG[k]}" x="0" y="0" width="${S}" height="${S}"/>
+  <g ${m.circle?`clip-path="url(#${p}c)"`:''}>
+    <g filter="url(#${p}w)" style="mix-blend-mode:${m.light?'multiply':'normal'}" opacity="${m.light?1:.95}">${lg}</g>
+    ${state.logo?`<image href="${IMG[k+'S']}" x="0" y="0" width="${S}" height="${S}" mask="url(#${p}m)" style="mix-blend-mode:${m.light?'multiply':'soft-light'}" opacity="${m.light?.35:.9}"/>`:''}
+  </g>
+  ${opt.bg!==false?`<text x="36" y="62" font-family="Onest, Arial, sans-serif" font-weight="700" font-size="34" fill="#14172A" letter-spacing="-1">${m.name}</text>`:''}
+  </svg>`;
+}
+function avatarSVG(){
+  return `<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="800" fill="#EEF1F8"/>
+  <text x="36" y="62" font-family="Onest, Arial, sans-serif" font-weight="700" font-size="34" fill="#14172A" letter-spacing="-1">Аватар Instagram</text>
+  ${nest(phone({a:'#FFFFFF',ink:'#14172A'}), [270,110,260,620])}</svg>`;
+}
+function monoWideSVG(){
+  const fb = uid(), fw = uid();
+  const fk = {ink:'#14172A'}, fd = {ink:'#FFFFFF'};
+  const L = (x,y,w,h,ff,fid) => logo(x,y,w,h,ff,{filter:state.logo?fid:null,noScale:true});
+  return `<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="${fb}"><feFlood flood-color="#14172A"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+  <filter id="${fw}"><feFlood flood-color="#FFFFFF"/><feComposite in2="SourceAlpha" operator="in"/></filter></defs>
+  <rect width="600" height="400" fill="#FFFFFF"/><rect x="600" width="600" height="400" fill="#14172A"/>
+  <text x="36" y="56" font-family="Onest, Arial, sans-serif" font-weight="700" font-size="30" fill="#14172A" letter-spacing="-1">Один цвет</text>
+  <text x="636" y="56" font-family="Arial" font-size="17" fill="#fff" opacity=".6">64 · 32 · 16 px · проверка на мелкий размер</text>
+  ${L(60,100,220,220,fk,fb)}${L(330,170,80,80,fk,fb)}${L(440,190,40,40,fk,fb)}${L(505,200,20,20,fk,fb)}
+  ${L(660,100,220,220,fd,fw)}${L(930,170,80,80,fd,fw)}${L(1040,190,40,40,fd,fw)}${L(1105,200,20,20,fd,fw)}
+  </svg>`;
+}
+function nest(svg, [x,y,w,h]){ return svg.replace('<svg ', `<svg x="${x}" y="${y}" width="${w}" height="${h}" `); }
+const ORDER = ['hoodie','cap','badge','tote','mug','avatar'];
+function tileById(id){ if(id==='mono') return monoWideSVG(); if(id==='avatar') return avatarSVG(); return photoSVG(id); }
+const DL_ICON = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+
+/* ---------- render ---------- */
+function renderGrid(pop){
+  const grid = $('#grid');
+  grid.innerHTML = ORDER.map(id => `<div class="tile${pop?' pop':''}">${tileById(id)}<button class="dl" data-dl="${id}">${DL_ICON}PNG</button></div>`).join('')
+    + `<div class="tile wide${pop?' pop':''}">${monoWideSVG()}<button class="dl" data-dl="mono">${DL_ICON}PNG</button></div>`;
+}
+function renderHero(){
+  $('#h-hoodie').innerHTML = photoSVG('tote',{bg:false,crop:true});
+  $('#h-cap').innerHTML = photoSVG('cap',{bg:false,crop:true});
+  $('#h-badge').innerHTML = photoSVG('badge',{bg:false,crop:true});
+  $('#h-phone').innerHTML = phone({a:'#FFFFFF',ink:'#14172A'});
+  $('#h-main').innerHTML = photoSVG('hoodie',{bg:false,crop:true});
+}
+function renderPrize(){
+  $('#prizeVis').innerHTML = `<svg viewBox="0 -30 560 460" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="280" cy="420" rx="250" ry="14" fill="#000" opacity=".18"/>
+  <g class="peek">${nest(photoSVG('hoodie',{bg:false,crop:true}),[60,0,270,320])}</g>
+  <g class="peek" style="animation-delay:-1.2s">${nest(photoSVG('cap',{bg:false,crop:true}),[280,70,210,180])}</g>
+  <g class="peek" style="animation-delay:-2.2s">${nest(photoSVG('mug',{bg:false,crop:true}),[380,150,140,120])}</g>
+  <path d="M40 230 L520 230 L500 410 Q498 420 486 420 L74 420 Q62 420 60 410Z" fill="#F4EFE6"/>
+  <path d="M40 230 L520 230 L516 262 L44 262Z" fill="#E3DCCE"/>
+  <rect x="250" y="230" width="60" height="190" fill="#C8F135"/>
+  <image href="${IMG.mark}" x="258" y="300" width="44" height="44"/>
+  <g transform="translate(80 300) rotate(-6)"><rect width="128" height="70" rx="12" fill="#fff"/><text x="64" y="32" text-anchor="middle" font-family="Onest, Arial" font-weight="800" font-size="15" fill="#14172A">Сертификат</text><text x="64" y="52" text-anchor="middle" font-family="Arial" font-size="10" fill="#6E7183">автор знака</text></g>
+  <g transform="translate(400 330) rotate(8)">${nest(photoSVG('badge',{bg:false,crop:true}),[-34,-34,68,68])}</g>
+  </svg>`;
+}
+function renderAttach(){
+  const a = $('#attach');
+  if(state.logo){ a.classList.add('has'); $('#attImg').src = state.logo; $('#attText').textContent = state.name + ' + мокапы из примерочной'; a.querySelector('button').textContent = 'Заменить'; }
+  else { a.classList.remove('has'); $('#attText').textContent = 'Логотип из примерочной ещё не загружен'; a.querySelector('button').textContent = 'Примерить'; }
+  const chip = $('#chip');
+  if(state.logo){ chip.classList.add('show'); $('#chipImg').src = state.logo; $('#chipName').textContent = state.name; } else chip.classList.remove('show');
+}
+function renderFiles(){
+  $('#flist').innerHTML = state.files.map((f,i)=>`<span>${f.name.replace(/</g,'&lt;')} · ${(f.size/1024/1024).toFixed(1)} МБ<button type="button" data-rm="${i}">✕</button></span>`).join('');
+  $('#filesText').textContent = state.files.length ? 'Добавить ещё файлы' : 'Добавить файлы работы';
+}
+function renderAll(pop){ renderGrid(pop); renderHero(); renderPrize(); renderAttach(); renderFiles(); }
+$$('[data-img]').forEach(im => { if(IMG[im.dataset.img]) im.src = IMG[im.dataset.img]; });
+
+/* ---------- file handling ---------- */
+state.files = [];
+const fileIn = $('#file');
+let scrollAfterPick = false;
+$$('[data-pick]').forEach(el => el.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); scrollAfterPick = !el.closest('#try') && !el.closest('#submit'); fileIn.click(); }));
+fileIn.addEventListener('change', () => { if(fileIn.files[0]) loadFile(fileIn.files[0]); fileIn.value=''; });
+function addFiles(list){
+  for(const f of list){ if(!state.files.some(x=>x.name===f.name && x.size===f.size)) state.files.push(f); }
+  renderFiles();
+}
+$('#files').addEventListener('change', e => { addFiles(e.target.files); e.target.value=''; });
+$('#flist').addEventListener('click', e => { const b = e.target.closest('[data-rm]'); if(b){ state.files.splice(+b.dataset.rm,1); renderFiles(); } });
+function checkAlpha(url){
+  return new Promise(res => { const im = new Image(); im.onload = () => { try{ const c=document.createElement('canvas'); c.width=40;c.height=40; const x=c.getContext('2d'); x.drawImage(im,0,0,40,40); const d=x.getImageData(0,0,40,40).data; const corners=[0,39*4,39*40*4,(40*40-1)*4]; res(corners.every(i=>d[i+3]>250)); }catch(e){res(false)} }; im.onerror=()=>res(false); im.src=url; });
+}
+function loadFile(file){
+  const isImg = /image\/(svg\+xml|png|jpeg|webp|gif)/.test(file.type) || /\.(svg|png|jpe?g|webp|gif)$/i.test(file.name);
+  addFiles([file]);
+  if(!isImg){ toast('Файл прикреплён к заявке. Для примерочной нужен PNG, JPG или SVG'); return; }
+  if(file.size > 15*1024*1024){ toast('Файл прикреплён, но для примерочной он слишком большой'); return; }
+  const r = new FileReader();
+  r.onload = () => {
+    const finish = url => {
+      state.logo = url; state.name = file.name;
+      renderAll(true);
+      checkAlpha(url).then(opaque => toast(opaque ? 'У логотипа есть фон: для реалистичных мокапов лучше PNG без фона' : 'Логотип примерен на всём мерче'));
+      if(scrollAfterPick) setTimeout(()=> document.getElementById('try').scrollIntoView({behavior:'smooth'}), 900);
+    };
+    if(/svg/.test(file.type) || /\.svg$/i.test(file.name)){
+      const txt = new TextDecoder().decode(new Uint8Array(r.result));
+      finish('data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(txt))));
+    } else { const fr = new FileReader(); fr.onload = () => finish(fr.result); fr.readAsDataURL(file); }
+  };
+  r.readAsArrayBuffer(file);
+}
+const drop = $('#drop');
+['dragenter','dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+drop.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if(f){ scrollAfterPick=false; loadFile(f); } });
+$('#chipX').addEventListener('click', () => { state.logo=null; state.name=''; renderAll(true); });
+$('#scale').addEventListener('input', e => { state.scale = e.target.value/100; renderGrid(false); renderHero(); });
+$$('[data-goto]').forEach(c => c.addEventListener('click', () => document.getElementById(c.dataset.goto).scrollIntoView({behavior:'smooth'})));
+
+/* ---------- downloads ---------- */
+let dlApi = null;
+(async () => { try { if(window.claude && claude.use){ dlApi = await claude.use('downloads'); } } catch(e){} })();
+function svgImage(svg){
+  return new Promise((res, rej) => { const img = new Image(); img.onload = () => res(img); img.onerror = rej;
+    img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svg))); });
+}
+async function toPng(parts, W, H){
+  const c = document.createElement('canvas'); c.width = W; c.height = H;
+  const ctx = c.getContext('2d'); ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0,0,W,H);
+  for(const p of parts){ const img = await svgImage(p.svg); ctx.drawImage(img, p.x, p.y, p.w, p.h); }
+  return await new Promise((res, rej) => { try { c.toBlob(b => b ? res(b) : rej(new Error('blob')), 'image/png'); } catch(e){ rej(e); } });
+}
+async function save(filename, data){
+  if(!dlApi){
+    try { const blob = data instanceof Blob ? data : new Blob([data]); const u = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = u; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u), 4000); toast('Файл скачан'); }
+    catch(e){ toast('Не получилось скачать, попробуй ещё раз'); }
+    return;
+  }
+  try { await dlApi.save({filename, data}); toast('Файл сохранён'); }
+  catch(e){ if(e && e.code==='declined') return; toast('Не получилось скачать, попробуй ещё раз'); }
+}
+async function downloadOne(id){
+  if(!state.logo){ toast('Сначала загрузи логотип'); return; }
+  const wide = id==='mono';
+  try { const b = await toPng([{svg:tileById(id),x:0,y:0,w:wide?2400:1600,h:wide?800:1600}], wide?2400:1600, wide?800:1600); save(`taldyk-mockup-${id}.png`, b); }
+  catch(e){ save(`taldyk-mockup-${id}.svg`, tileById(id)); }
+}
+async function downloadAll(){
+  if(!state.logo){ toast('Сначала загрузи логотип'); return; }
+  const parts = ORDER.map((id,i) => ({svg:tileById(id), x:(i%3)*820+20, y:Math.floor(i/3)*820+20, w:800, h:800}));
+  parts.push({svg:monoWideSVG(), x:20, y:1660, w:2440, h:813});
+  try { const b = await toPng(parts, 2480, 2493); save('taldyk-alumni-mockups.png', b); }
+  catch(e){ toast('Не получилось собрать PNG, скачай мокапы по одному'); }
+}
+$('#grid').addEventListener('click', e => { const b = e.target.closest('[data-dl]'); if(b) downloadOne(b.dataset.dl); });
+$('#dlAll').addEventListener('click', downloadAll);
+
+/* ---------- form ---------- */
+const ys = $('#yearSel'); for(let y=2026; y>=1996; y--){ const o=document.createElement('option'); o.value=y; o.textContent=y; ys.appendChild(o); }
+const SUBMIT_URL = 'https://script.google.com/macros/s/AKfycbxLEflcvgmCFZbM9wiaSnfmd1VLx-8MW50Aga98Hn0x_KH_5t68vWH51tknll6rTgVoUw/exec';
+const MAX_TOTAL = 30*1024*1024;
+const b64 = blob => new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(',')[1]); r.onerror = rej; r.readAsDataURL(blob); });
+let sending = false;
+$('#form').addEventListener('submit', async e => {
+  e.preventDefault();
+  if(sending) return;
+  const f = e.target; let bad = false;
+  $$('.f', f).forEach(x=>x.classList.remove('err')); $('#agreeWrap').classList.remove('err');
+  ['name','year','phone','idea'].forEach(n => { if(!f[n].value.trim()){ f[n].closest('.f').classList.add('err'); bad = true; } });
+  if(!f.agree.checked){ $('#agreeWrap').classList.add('err'); bad = true; }
+  if(!state.logo && !state.files.length){ $('#attach').closest('.f').classList.add('err'); bad = true; }
+  if(bad){ toast('Заполни обязательные поля и прикрепи файлы работы'); return; }
+  const total = state.files.reduce((n,x)=>n+x.size,0);
+  if(total > MAX_TOTAL){ toast('Файлы больше 30 МБ вместе. Сожми их или заархивируй'); return; }
+  if(!/^https:\/\/script\.google\.com\//.test(SUBMIT_URL)){ toast('Приём заявок ещё не подключён'); return; }
+  const btn = f.querySelector('button[type=submit]'); const label = btn.innerHTML;
+  sending = true; btn.disabled = true; btn.innerHTML = 'Отправляем...';
+  try {
+    const files = [];
+    for(const x of state.files) files.push({name:x.name, type:x.type || 'application/octet-stream', data: await b64(x)});
+    let mockups = null;
+    if(state.logo){
+      try {
+        const parts = ORDER.map((id,i) => ({svg:tileById(id), x:(i%3)*820+20, y:Math.floor(i/3)*820+20, w:800, h:800}));
+        parts.push({svg:monoWideSVG(), x:20, y:1660, w:2440, h:813});
+        mockups = await b64(await toPng(parts, 2480, 2493));
+      } catch(_){}
+    }
+    const payload = {name:f.name.value.trim(), year:f.year.value, phone:f.phone.value.trim(), ig:f.ig.value.trim(), city:f.city.value.trim(), idea:f.idea.value.trim(), website:f.website ? f.website.value : '', files, mockups};
+    const r = await fetch(SUBMIT_URL, {method:'POST', body: JSON.stringify(payload)});
+    const j = await r.json();
+    if(!j.ok) throw new Error(j.error || 'fail');
+    $('#mTitle').textContent = 'Работа отправлена!';
+    $('#mText').textContent = `Спасибо, ${payload.name.split(' ')[0]}! Заявка №${j.id} у нас. Шорт-лист объявим 24 декабря в Instagram @taldycom.`;
+    $('#modal').classList.add('show');
+    f.reset(); state.files = []; renderFiles();
+  } catch(err){
+    toast('Не получилось отправить. Проверь интернет и попробуй ещё раз');
+  } finally { sending = false; btn.disabled = false; btn.innerHTML = label; }
+});
+$('#mClose').addEventListener('click', ()=> $('#modal').classList.remove('show'));
+$('#modal').addEventListener('click', e => { if(e.target.id==='modal') e.currentTarget.classList.remove('show'); });
+
+/* ---------- FAQ ---------- */
+const FAQ = [
+  ['Кто может участвовать?','Выпускники Талдыкорганского лицея любого года: и КТЛ, и «Білім-инновация». При подаче указываешь год выпуска, финалистов проверяем через сообщество.'],
+  ['Сколько работ можно отправить?','До 3 работ от одного участника. Каждую подавай отдельной заявкой.'],
+  ['Можно участвовать командой?','Да, если все участники команды выпускники лицея. Приз один на команду.'],
+  ['В каком формате сдавать?','В любом: PNG, JPG, SVG, PDF, AI или ZIP-архив. Лучше всего PNG без фона или вектор. Плюс пара предложений о том, что означает знак. Мокапы из примерочной прикрепятся сами.'],
+  ['Можно ли использовать нейросети?','Да, можно. Не все выпускники дизайнеры, и это нормально. Главное, чтобы идея была твоей, а знак можно было напечатать на мерче. Если победит работа из нейросети, мы вместе доведём её до вектора.'],
+  ['Кому будут принадлежать права?','Права на знак победителя переходят сообществу Taldyk Alumni. Автор всегда указывается, а при доработке знака мы работаем вместе с ним.'],
+  ['Когда объявят победителя?','30 декабря в Instagram @taldycom. Финалисты узнают о шорт-листе 24 декабря.']
+];
+$('#faqList').innerHTML = FAQ.map((q,i) => `<div class="qa${i===0?' open':''}"><button>${q[0]}<i></i></button><div class="ans"><div><p>${q[1]}</p></div></div></div>`).join('');
+$$('.qa button').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
+
+/* ---------- marquee ---------- */
+const words = ['Taldyk Alumni','Создай логотип','с 1993 года','Біздің белгі','1500 выпускников','Logo Challenge','Получи приз','Бір қауымдастық'];
+$('#mq').innerHTML = [...words, ...words].map(w=>`<span>${w}</span>`).join('');
+
+/* ---------- reveal + count ---------- */
+const io = new IntersectionObserver(es => es.forEach(en => {
+  if(!en.isIntersecting) return;
+  en.target.classList.add('in');
+  $$('[data-count]', en.target).forEach(countUp);
+  io.unobserve(en.target);
+}), {threshold:.18});
+$$('.reveal').forEach(el => io.observe(el));
+function countUp(el){
+  if(el.dataset.done) return; el.dataset.done = 1;
+  const end = +el.dataset.count, start = el.hasAttribute('data-plain') ? end-60 : 0, t0 = performance.now(), dur = 1600;
+  const step = t => { const p = Math.min(1,(t-t0)/dur), e = 1-Math.pow(1-p,3); el.textContent = Math.round(start + (end-start)*e); if(p<1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+
+/* ---------- fan scale + parallax ---------- */
+function fitFan(){
+  const w = $('#fanBox').clientWidth, s = Math.min(1, (w+60)/1240);
+  $('#fan').style.transform = `scale(${s})`;
+  $('#fanBox').style.height = (540*s) + 'px';
+}
+window.addEventListener('resize', fitFan); fitFan();
+const fan = $('#fan');
+document.querySelector('.hero').addEventListener('mousemove', e => {
+  const r = e.currentTarget.getBoundingClientRect();
+  const dx = (e.clientX - r.left)/r.width - .5;
+  $$('.cw', fan).forEach((cw,i) => { const k = [-1,-.5,.5,1,0][i]; cw.querySelector('.card').style.translate = `${dx*14*(k||.4)}px 0`; });
+});
+$('#mega').innerHTML = megaphone(); $('#gift').innerHTML = giftSmall();
+
+/* ---------- nav ---------- */
+const nav = $('#nav');
+const secs = ['about','do','brief','try','prize','steps','faq'].map(id=>document.getElementById(id));
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', scrollY > 20);
+  let cur = ''; secs.forEach(s => { if(s.getBoundingClientRect().top < innerHeight*.4) cur = s.id; });
+  $$('#menu a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+cur));
+}, {passive:true});
+
+/* ---------- toast ---------- */
+let tt; function toast(msg){ $('#toastText').textContent = msg; $('#toast').classList.add('show'); clearTimeout(tt); tt = setTimeout(()=>$('#toast').classList.remove('show'), 2600); }
+
+renderAll(false);
+})();
+</script>
+</body>
+</html>
