@@ -343,6 +343,11 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
 @media (max-width:1240px){.menu{display:none}}
 html[lang=kk] h1{font-size:clamp(28px,7.4vw,100px)}
 @media (max-width:640px){.nav-right .btn-white{display:none}.nav-right{gap:10px}}
+.prize{grid-template-columns:1fr 1fr}
+.prize-vis{padding:0;display:block;min-height:0;aspect-ratio:4/5;background:#E9E7E3}
+.prize-vis::before{display:none}
+.prize-vis img{width:100%;height:100%;object-fit:cover;object-position:center 62%;display:block;transition:transform 1.2s cubic-bezier(.2,.9,.25,1)}
+.prize-vis:hover img{transform:scale(1.04)}
 /* RESPONSIVE */
 @media (max-width:1020px){
   .menu{display:none}
@@ -977,18 +982,7 @@ function renderHero(){
   $('#h-main').innerHTML = photoSVG('hoodie',{bg:false,crop:true});
 }
 function renderPrize(){
-  $('#prizeVis').innerHTML = `<svg viewBox="0 -30 560 460" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="280" cy="420" rx="250" ry="14" fill="#000" opacity=".18"/>
-  <g class="peek">${nest(photoSVG('hoodie',{bg:false,crop:true}),[60,0,270,320])}</g>
-  <g class="peek" style="animation-delay:-1.2s">${nest(photoSVG('cap',{bg:false,crop:true}),[280,70,210,180])}</g>
-  <g class="peek" style="animation-delay:-2.2s">${nest(photoSVG('mug',{bg:false,crop:true}),[380,150,140,120])}</g>
-  <path d="M40 230 L520 230 L500 410 Q498 420 486 420 L74 420 Q62 420 60 410Z" fill="#F4EFE6"/>
-  <path d="M40 230 L520 230 L516 262 L44 262Z" fill="#E3DCCE"/>
-  <rect x="250" y="230" width="60" height="190" fill="#C8F135"/>
-  <image href="${IMG.mark}" x="258" y="300" width="44" height="44"/>
-  <g transform="translate(80 300) rotate(-6)"><rect width="128" height="70" rx="12" fill="#fff"/><text x="64" y="32" text-anchor="middle" font-family="Onest, Arial" font-weight="800" font-size="15" fill="#14172A">Сертификат</text><text x="64" y="52" text-anchor="middle" font-family="Arial" font-size="10" fill="#6E7183">${T('автор знака','белгі авторы')}</text></g>
-  <g transform="translate(400 330) rotate(8)">${nest(photoSVG('badge',{bg:false,crop:true}),[-34,-34,68,68])}</g>
-  </svg>`;
+  $('#prizeVis').innerHTML = `<img src="${IMG.box}" alt="${T('Бокс выпускника Taldyk Alumni','Taldyk Alumni түлек боксы')}">`;
 }
 function renderAttach(){
   const a = $('#attach');
