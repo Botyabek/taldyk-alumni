@@ -335,6 +335,14 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
 .card .obj img,.card .obj svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 22px rgba(0,0,0,.3))}
 @media (max-width:1020px){.now{grid-template-columns:1fr}}
 
+.lang{display:flex;gap:2px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:4px}
+.lang button{padding:7px 11px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--muted);transition:.25s}
+.lang button.on{background:var(--lime);color:var(--navy)}
+.lang button:not(.on):hover{color:var(--text)}
+.menu a{white-space:nowrap}.brand small{white-space:nowrap}.btn{white-space:nowrap}
+@media (max-width:1240px){.menu{display:none}}
+html[lang=kk] h1{font-size:clamp(28px,7.4vw,100px)}
+@media (max-width:640px){.nav-right .btn-white{display:none}.nav-right{gap:10px}}
 /* RESPONSIVE */
 @media (max-width:1020px){
   .menu{display:none}
@@ -382,6 +390,7 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-right">
+      <div class="lang" id="lang"><button data-l="kk">ҚАЗ</button><button data-l="ru">РУС</button></div>
       <a class="ig" href="https://www.instagram.com/taldycom/" target="_blank" rel="noopener">Instagram</a>
       <a href="#submit" class="btn btn-white">Участвовать</a>
     </div>
@@ -392,11 +401,11 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
 <!-- HERO -->
 <section class="hero" style="padding-top:46px">
   <div class="wrap" style="position:relative">
-    <div class="tag" style="left:3%;top:20px;--d:7s;--dx:16px;--dy:-12px;animation-delay:.9s,0s">
+    <div class="tag" style="left:2%;top:-8px;--d:7s;--dx:16px;--dy:-12px;animation-delay:.9s,0s">
       <svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.6-8.4L21 10z" fill="#C8F135"/></svg><b style="background:#C8F135">2004</b></div>
     <div class="tag" style="left:7%;top:450px;--d:8.5s;--dx:-12px;--dy:10px;animation-delay:1.1s,0s">
       <svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.6-8.4L21 10z" fill="#FF6E5A"/></svg><b style="background:#FF6E5A;color:#fff">2011</b></div>
-    <div class="tag" style="right:4%;top:40px;--d:7.5s;--dx:-14px;--dy:12px;animation-delay:1.3s,0s">
+    <div class="tag" style="right:2%;top:-4px;--d:7.5s;--dx:-14px;--dy:12px;animation-delay:1.3s,0s">
       <svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.6-8.4L21 10z" fill="#17BFA5"/></svg><b style="background:#17BFA5">2019</b></div>
     <div class="tag" style="right:8%;top:470px;--d:9s;--dx:12px;--dy:-14px;animation-delay:1.5s,0s">
       <svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.6-8.4L21 10z" fill="#FF9A3C"/></svg><b style="background:#FF9A3C">1998</b></div>
@@ -405,9 +414,9 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
     <i class="sparkle" style="left:28%;top:10px;animation-delay:2.1s"></i>
     <i class="sparkle" style="right:20%;top:470px;animation-delay:.9s"></i>
 
-    <div class="pill"><img class="pill-mark" src="" data-img="mark" alt="">Taldyk Alumni объявляет конкурс · приём работ до 01.12</div>
+    <div class="pill"><img class="pill-mark" src="" data-img="mark" alt=""><span>Taldyk Alumni объявляет конкурс · приём работ до 01.12</span></div>
     <h1><span class="ln"><span>Создай <em>логотип</em></span></span><span class="ln"><span>для нашего сообщества</span></span><span class="ln small"><span>и получи приз от нас</span></span></h1>
-    <p class="sub">Мы, выпускники Талдыкорганского лицея, ищем свой знак. Победитель получит Бокс выпускника, а его логотип появится на мерче 1500 выпускников.</p>
+    <p class="sub">Мы, выпускники Талдыкорганского лицея, ищем свой знак. Победитель получит Бокс выпускника и денежный приз, а его логотип появится на мерче 1500 выпускников.</p>
     <div class="hero-ctas">
       <button class="btn btn-lime" data-pick>Примерить свой логотип</button>
       <a href="#brief" class="btn btn-ghost">Читать бриф</a>
@@ -588,14 +597,15 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
 <section id="prize">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><span class="sec-label mono">(06) Приз</span><h2>Бокс <em>выпускника</em></h2></div>
-      <p class="lead">Автор лучшего знака получит первый мерч Taldyk Alumni со своим же логотипом.</p>
+      <div><span class="sec-label mono">(06) Приз</span><h2>Мерч и <em>денежный приз</em></h2></div>
+      <p class="lead">Автор лучшего знака получит денежный приз и Бокс выпускника: первый мерч Taldyk Alumni со своим же логотипом.</p>
     </div>
     <div class="prize">
       <div class="box prize-vis reveal" id="prizeVis"></div>
       <div class="box prize-list reveal d1">
-        <h3>Что внутри</h3>
+        <h3>Что получит победитель</h3>
         <ul class="items">
+          <li>Денежный приз <span>Сумма скоро</span></li>
           <li>Худи с новым знаком <span>№001</span></li>
           <li>Кепка <span>Мерч</span></li>
           <li>Термокружка <span>Мерч</span></li>
@@ -650,7 +660,7 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
 </footer>
 
 <input type="file" id="file" hidden>
-<div class="modal" id="modal"><div class="m"><div class="badge">✓</div><h3 id="mTitle">Заявка готова</h3><p id="mText"></p><button class="btn btn-lime" id="mClose">Понятно</button></div></div>
+<div class="modal" id="modal"><div class="m"><div class="badge">✓</div><h3 id="mTitle"></h3><p id="mText"></p><button class="btn btn-lime" id="mClose">Понятно</button></div></div>
 <div class="toast" id="toast"><i></i><span id="toastText"></span></div>
 
 <script src="assets.js"></script>
@@ -658,6 +668,8 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
 (() => {
 const $ = (s, r=document) => r.querySelector(s);
 const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+let lang = 'ru'; try { lang = localStorage.getItem('ta_lang') || 'ru'; } catch(e){}
+const T = (ru, kk) => lang==='kk' ? kk : ru;
 const state = { logo:null, name:'', color:'navy', scale:1 };
 const FAB = {
   navy:{a:'#2A3A72',b:'#18214A',c:'#121939',ink:'#FFFFFF'},
@@ -821,12 +833,12 @@ function phone(f){
   <circle cx="110" cy="128" r="50" fill="${f.a}"/>
   <g clip-path="url(#${cl})"><g style="mix-blend-mode:${isLight(f)?'multiply':'normal'}">${logo(72,90,76,76,f)}</g></g>
   <text x="110" y="208" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#111">Taldyk Alumni</text>
-  <text x="110" y="226" text-anchor="middle" font-family="Arial" font-size="11" fill="#777">Сообщество выпускников · КТЛ / БИЛ</text>
-  <g font-family="Arial" text-anchor="middle"><text x="52" y="264" font-weight="700" font-size="15" fill="#111">1500</text><text x="52" y="280" font-size="9" fill="#888">выпускников</text>
-  <text x="110" y="264" font-weight="700" font-size="15" fill="#111">33</text><text x="110" y="280" font-size="9" fill="#888">года</text>
-  <text x="168" y="264" font-weight="700" font-size="15" fill="#111">1993</text><text x="168" y="280" font-size="9" fill="#888">с года</text></g>
-  <rect x="26" y="298" width="80" height="28" rx="8" fill="#0095F6"/><text x="66" y="316" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="#fff">Подписаться</text>
-  <rect x="114" y="298" width="80" height="28" rx="8" fill="#EFEFF2"/><text x="154" y="316" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="#111">Сообщение</text>
+  <text x="110" y="226" text-anchor="middle" font-family="Arial" font-size="11" fill="#777">${T('Сообщество выпускников · КТЛ / БИЛ','Түлектер қауымдастығы · ҚТЛ / БИЛ')}</text>
+  <g font-family="Arial" text-anchor="middle"><text x="52" y="264" font-weight="700" font-size="15" fill="#111">1500</text><text x="52" y="280" font-size="9" fill="#888">${T('выпускников','түлек')}</text>
+  <text x="110" y="264" font-weight="700" font-size="15" fill="#111">33</text><text x="110" y="280" font-size="9" fill="#888">${T('года','жыл')}</text>
+  <text x="168" y="264" font-weight="700" font-size="15" fill="#111">1993</text><text x="168" y="280" font-size="9" fill="#888">${T('с года','жылдан')}</text></g>
+  <rect x="26" y="298" width="80" height="28" rx="8" fill="#0095F6"/><text x="66" y="316" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="#fff">${T('Подписаться','Жазылу')}</text>
+  <rect x="114" y="298" width="80" height="28" rx="8" fill="#EFEFF2"/><text x="154" y="316" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="#111">${T('Сообщение','Хабарлама')}</text>
   <rect x="12" y="338" width="64" height="64" fill="#C8F135"/><rect x="78" y="338" width="64" height="64" fill="#8B6CFF"/><rect x="144" y="338" width="64" height="64" fill="#17BFA5"/>
   <rect x="2" y="2" width="216" height="416" rx="38" fill="url(#${g}s)"/>
   </svg>`;
@@ -898,11 +910,11 @@ function giftSmall(){
 /* ---------- photo mockups ---------- */
 const IMG = window.IMG || {};
 const PM = {
-  hoodie:{name:'Худи', bg:'#ECEAF3', r:[0.4003,0.5223,0.1994,0.1140], light:true, bb:[121,35,1114,1188]},
-  cap:{name:'Кепка', bg:'#F3ECE9', r:[0.4027,0.3349,0.1954,0.1435], light:true, bb:[212,205,1035,960]},
-  badge:{name:'Значок', bg:'#E8F1EF', r:[0.2807,0.2847,0.4147,0.4147], light:true, bb:[213,203,1012,1031], circle:[0.4880,0.4920,0.315]},
-  tote:{name:'Шопер', bg:'#F2EEE6', r:[0.3485,0.5183,0.3030,0.3030], light:true, bb:[305,46,949,1190]},
-  mug:{name:'Кружка', bg:'#E9EDF4', r:[0.3030,0.3748,0.2791,0.2871], light:true, bb:[265,293,1105,1003]},
+  hoodie:{name:'Худи', kk:'Худи', bg:'#ECEAF3', r:[0.4003,0.5223,0.1994,0.1140], light:true, bb:[121,35,1114,1188]},
+  cap:{name:'Кепка', kk:'Кепка', bg:'#F3ECE9', r:[0.4027,0.3349,0.1954,0.1435], light:true, bb:[212,205,1035,960]},
+  badge:{name:'Значок', kk:'Значок', bg:'#E8F1EF', r:[0.2807,0.2847,0.4147,0.4147], light:true, bb:[213,203,1012,1031], circle:[0.4880,0.4920,0.315]},
+  tote:{name:'Шопер', kk:'Шоппер', bg:'#F2EEE6', r:[0.3485,0.5183,0.3030,0.3030], light:true, bb:[305,46,949,1190]},
+  mug:{name:'Кружка', kk:'Кесе', bg:'#E9EDF4', r:[0.3030,0.3748,0.2791,0.2871], light:true, bb:[265,293,1105,1003]},
 };
 function photoSVG(k, opt={}){
   const m = PM[k], S = 800, p = uid();
@@ -924,12 +936,12 @@ function photoSVG(k, opt={}){
     <g filter="url(#${p}w)" style="mix-blend-mode:${m.light?'multiply':'normal'}" opacity="${m.light?1:.95}">${lg}</g>
     ${state.logo?`<image href="${IMG[k+'S']}" x="0" y="0" width="${S}" height="${S}" mask="url(#${p}m)" style="mix-blend-mode:${m.light?'multiply':'soft-light'}" opacity="${m.light?.35:.9}"/>`:''}
   </g>
-  ${opt.bg!==false?`<text x="36" y="62" font-family="Onest, Arial, sans-serif" font-weight="700" font-size="34" fill="#14172A" letter-spacing="-1">${m.name}</text>`:''}
+  ${opt.bg!==false?`<text x="36" y="62" font-family="Onest, Arial, sans-serif" font-weight="700" font-size="34" fill="#14172A" letter-spacing="-1">${lang==='kk'?m.kk:m.name}</text>`:''}
   </svg>`;
 }
 function avatarSVG(){
   return `<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="800" fill="#EEF1F8"/>
-  <text x="36" y="62" font-family="Onest, Arial, sans-serif" font-weight="700" font-size="34" fill="#14172A" letter-spacing="-1">Аватар Instagram</text>
+  <text x="36" y="62" font-family="Onest, Arial, sans-serif" font-weight="700" font-size="34" fill="#14172A" letter-spacing="-1">${T('Аватар Instagram','Instagram аватары')}</text>
   ${nest(phone({a:'#FFFFFF',ink:'#14172A'}), [270,110,260,620])}</svg>`;
 }
 function monoWideSVG(){
@@ -940,8 +952,8 @@ function monoWideSVG(){
   <defs><filter id="${fb}"><feFlood flood-color="#14172A"/><feComposite in2="SourceAlpha" operator="in"/></filter>
   <filter id="${fw}"><feFlood flood-color="#FFFFFF"/><feComposite in2="SourceAlpha" operator="in"/></filter></defs>
   <rect width="600" height="400" fill="#FFFFFF"/><rect x="600" width="600" height="400" fill="#14172A"/>
-  <text x="36" y="56" font-family="Onest, Arial, sans-serif" font-weight="700" font-size="30" fill="#14172A" letter-spacing="-1">Один цвет</text>
-  <text x="636" y="56" font-family="Arial" font-size="17" fill="#fff" opacity=".6">64 · 32 · 16 px · проверка на мелкий размер</text>
+  <text x="36" y="56" font-family="Onest, Arial, sans-serif" font-weight="700" font-size="30" fill="#14172A" letter-spacing="-1">${T('Один цвет','Бір түс')}</text>
+  <text x="636" y="56" font-family="Arial" font-size="17" fill="#fff" opacity=".6">64 · 32 · 16 px · ${T('проверка на мелкий размер','кіші өлшемде тексеру')}</text>
   ${L(60,100,220,220,fk,fb)}${L(330,170,80,80,fk,fb)}${L(440,190,40,40,fk,fb)}${L(505,200,20,20,fk,fb)}
   ${L(660,100,220,220,fd,fw)}${L(930,170,80,80,fd,fw)}${L(1040,190,40,40,fd,fw)}${L(1105,200,20,20,fd,fw)}
   </svg>`;
@@ -974,20 +986,20 @@ function renderPrize(){
   <path d="M40 230 L520 230 L516 262 L44 262Z" fill="#E3DCCE"/>
   <rect x="250" y="230" width="60" height="190" fill="#C8F135"/>
   <image href="${IMG.mark}" x="258" y="300" width="44" height="44"/>
-  <g transform="translate(80 300) rotate(-6)"><rect width="128" height="70" rx="12" fill="#fff"/><text x="64" y="32" text-anchor="middle" font-family="Onest, Arial" font-weight="800" font-size="15" fill="#14172A">Сертификат</text><text x="64" y="52" text-anchor="middle" font-family="Arial" font-size="10" fill="#6E7183">автор знака</text></g>
+  <g transform="translate(80 300) rotate(-6)"><rect width="128" height="70" rx="12" fill="#fff"/><text x="64" y="32" text-anchor="middle" font-family="Onest, Arial" font-weight="800" font-size="15" fill="#14172A">Сертификат</text><text x="64" y="52" text-anchor="middle" font-family="Arial" font-size="10" fill="#6E7183">${T('автор знака','белгі авторы')}</text></g>
   <g transform="translate(400 330) rotate(8)">${nest(photoSVG('badge',{bg:false,crop:true}),[-34,-34,68,68])}</g>
   </svg>`;
 }
 function renderAttach(){
   const a = $('#attach');
-  if(state.logo){ a.classList.add('has'); $('#attImg').src = state.logo; $('#attText').textContent = state.name + ' + мокапы из примерочной'; a.querySelector('button').textContent = 'Заменить'; }
-  else { a.classList.remove('has'); $('#attText').textContent = 'Логотип из примерочной ещё не загружен'; a.querySelector('button').textContent = 'Примерить'; }
+  if(state.logo){ a.classList.add('has'); $('#attImg').src = state.logo; $('#attText').textContent = state.name + T(' + мокапы из примерочной',' + сынап көрудегі мокаптар'); a.querySelector('button').textContent = T('Заменить','Ауыстыру'); }
+  else { a.classList.remove('has'); $('#attText').textContent = T('Логотип из примерочной ещё не загружен','Сынап көруге логотип әлі жүктелмеген'); a.querySelector('button').textContent = T('Примерить','Сынап көру'); }
   const chip = $('#chip');
   if(state.logo){ chip.classList.add('show'); $('#chipImg').src = state.logo; $('#chipName').textContent = state.name; } else chip.classList.remove('show');
 }
 function renderFiles(){
   $('#flist').innerHTML = state.files.map((f,i)=>`<span>${f.name.replace(/</g,'&lt;')} · ${(f.size/1024/1024).toFixed(1)} МБ<button type="button" data-rm="${i}">✕</button></span>`).join('');
-  $('#filesText').textContent = state.files.length ? 'Добавить ещё файлы' : 'Добавить файлы работы';
+  $('#filesText').textContent = state.files.length ? T('Добавить ещё файлы','Тағы файл қосу') : T('Добавить файлы работы','Жұмыс файлдарын қосу');
 }
 function renderAll(pop){ renderGrid(pop); renderHero(); renderPrize(); renderAttach(); renderFiles(); }
 $$('[data-img]').forEach(im => { if(IMG[im.dataset.img]) im.src = IMG[im.dataset.img]; });
@@ -1010,14 +1022,14 @@ function checkAlpha(url){
 function loadFile(file){
   const isImg = /image\/(svg\+xml|png|jpeg|webp|gif)/.test(file.type) || /\.(svg|png|jpe?g|webp|gif)$/i.test(file.name);
   addFiles([file]);
-  if(!isImg){ toast('Файл прикреплён к заявке. Для примерочной нужен PNG, JPG или SVG'); return; }
-  if(file.size > 15*1024*1024){ toast('Файл прикреплён, но для примерочной он слишком большой'); return; }
+  if(!isImg){ toast(T('Файл прикреплён к заявке. Для примерочной нужен PNG, JPG или SVG','Файл өтінімге тіркелді. Сынап көру үшін PNG, JPG немесе SVG керек')); return; }
+  if(file.size > 15*1024*1024){ toast(T('Файл прикреплён, но для примерочной он слишком большой','Файл тіркелді, бірақ сынап көру үшін тым үлкен')); return; }
   const r = new FileReader();
   r.onload = () => {
     const finish = url => {
       state.logo = url; state.name = file.name;
       renderAll(true);
-      checkAlpha(url).then(opaque => toast(opaque ? 'У логотипа есть фон: для реалистичных мокапов лучше PNG без фона' : 'Логотип примерен на всём мерче'));
+      checkAlpha(url).then(opaque => toast(opaque ? T('У логотипа есть фон: для реалистичных мокапов лучше PNG без фона','Логотиптің фоны бар: шынайы мокап үшін фонсыз PNG жақсы') : T('Логотип примерен на всём мерче','Логотип барлық мерчте көрсетілді')));
       if(scrollAfterPick) setTimeout(()=> document.getElementById('try').scrollIntoView({behavior:'smooth'}), 900);
     };
     if(/svg/.test(file.type) || /\.svg$/i.test(file.name)){
@@ -1050,25 +1062,25 @@ async function toPng(parts, W, H){
 }
 async function save(filename, data){
   if(!dlApi){
-    try { const blob = data instanceof Blob ? data : new Blob([data]); const u = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = u; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u), 4000); toast('Файл скачан'); }
-    catch(e){ toast('Не получилось скачать, попробуй ещё раз'); }
+    try { const blob = data instanceof Blob ? data : new Blob([data]); const u = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = u; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u), 4000); toast(T('Файл скачан','Файл жүктелді')); }
+    catch(e){ toast(T('Не получилось скачать, попробуй ещё раз','Жүктеу сәтсіз болды, қайта көр')); }
     return;
   }
-  try { await dlApi.save({filename, data}); toast('Файл сохранён'); }
-  catch(e){ if(e && e.code==='declined') return; toast('Не получилось скачать, попробуй ещё раз'); }
+  try { await dlApi.save({filename, data}); toast(T('Файл сохранён','Файл сақталды')); }
+  catch(e){ if(e && e.code==='declined') return; toast(T('Не получилось скачать, попробуй ещё раз','Жүктеу сәтсіз болды, қайта көр')); }
 }
 async function downloadOne(id){
-  if(!state.logo){ toast('Сначала загрузи логотип'); return; }
+  if(!state.logo){ toast(T('Сначала загрузи логотип','Алдымен логотипті жүкте')); return; }
   const wide = id==='mono';
   try { const b = await toPng([{svg:tileById(id),x:0,y:0,w:wide?2400:1600,h:wide?800:1600}], wide?2400:1600, wide?800:1600); save(`taldyk-mockup-${id}.png`, b); }
   catch(e){ save(`taldyk-mockup-${id}.svg`, tileById(id)); }
 }
 async function downloadAll(){
-  if(!state.logo){ toast('Сначала загрузи логотип'); return; }
+  if(!state.logo){ toast(T('Сначала загрузи логотип','Алдымен логотипті жүкте')); return; }
   const parts = ORDER.map((id,i) => ({svg:tileById(id), x:(i%3)*820+20, y:Math.floor(i/3)*820+20, w:800, h:800}));
   parts.push({svg:monoWideSVG(), x:20, y:1660, w:2440, h:813});
   try { const b = await toPng(parts, 2480, 2493); save('taldyk-alumni-mockups.png', b); }
-  catch(e){ toast('Не получилось собрать PNG, скачай мокапы по одному'); }
+  catch(e){ toast(T('Не получилось собрать PNG, скачай мокапы по одному','PNG жиналмады, мокаптарды бір-бірлеп жүкте')); }
 }
 $('#grid').addEventListener('click', e => { const b = e.target.closest('[data-dl]'); if(b) downloadOne(b.dataset.dl); });
 $('#dlAll').addEventListener('click', downloadAll);
@@ -1087,12 +1099,12 @@ $('#form').addEventListener('submit', async e => {
   ['name','year','phone','idea'].forEach(n => { if(!f[n].value.trim()){ f[n].closest('.f').classList.add('err'); bad = true; } });
   if(!f.agree.checked){ $('#agreeWrap').classList.add('err'); bad = true; }
   if(!state.logo && !state.files.length){ $('#attach').closest('.f').classList.add('err'); bad = true; }
-  if(bad){ toast('Заполни обязательные поля и прикрепи файлы работы'); return; }
+  if(bad){ toast(T('Заполни обязательные поля и прикрепи файлы работы','Міндетті өрістерді толтырып, жұмыс файлдарын тірке')); return; }
   const total = state.files.reduce((n,x)=>n+x.size,0);
-  if(total > MAX_TOTAL){ toast('Файлы больше 30 МБ вместе. Сожми их или заархивируй'); return; }
-  if(!/^https:\/\/script\.google\.com\//.test(SUBMIT_URL)){ toast('Приём заявок ещё не подключён'); return; }
+  if(total > MAX_TOTAL){ toast(T('Файлы больше 30 МБ вместе. Сожми их или заархивируй','Файлдар жалпы 30 МБ-тан асады. Оларды сығып немесе архивтеп жібер')); return; }
+  if(!/^https:\/\/script\.google\.com\//.test(SUBMIT_URL)){ toast(T('Приём заявок ещё не подключён','Өтінім қабылдау әлі қосылмаған')); return; }
   const btn = f.querySelector('button[type=submit]'); const label = btn.innerHTML;
-  sending = true; btn.disabled = true; btn.innerHTML = 'Отправляем...';
+  sending = true; btn.disabled = true; btn.innerHTML = T('Отправляем...','Жіберіп жатырмыз...');
   try {
     const files = [];
     for(const x of state.files) files.push({name:x.name, type:x.type || 'application/octet-stream', data: await b64(x)});
@@ -1108,19 +1120,19 @@ $('#form').addEventListener('submit', async e => {
     const r = await fetch(SUBMIT_URL, {method:'POST', body: JSON.stringify(payload)});
     const j = await r.json();
     if(!j.ok) throw new Error(j.error || 'fail');
-    $('#mTitle').textContent = 'Работа отправлена!';
-    $('#mText').textContent = `Спасибо, ${payload.name.split(' ')[0]}! Заявка №${j.id} у нас. Шорт-лист объявим 5 декабря в Instagram @taldycom.`;
+    $('#mTitle').textContent = T('Работа отправлена!','Жұмыс жіберілді!');
+    $('#mText').textContent = T(`Спасибо, ${payload.name.split(' ')[0]}! Заявка №${j.id} у нас. Шорт-лист объявим 5 декабря в Instagram @taldycom.`, `Рақмет, ${payload.name.split(' ')[0]}! №${j.id} өтінім бізде. Шорт-листті 5 желтоқсанда Instagram @taldycom парақшасында жариялаймыз.`);
     $('#modal').classList.add('show');
     f.reset(); state.files = []; renderFiles();
   } catch(err){
-    toast('Не получилось отправить. Проверь интернет и попробуй ещё раз');
+    toast(T('Не получилось отправить. Проверь интернет и попробуй ещё раз','Жіберу сәтсіз болды. Интернетті тексеріп, қайта көр'));
   } finally { sending = false; btn.disabled = false; btn.innerHTML = label; }
 });
 $('#mClose').addEventListener('click', ()=> $('#modal').classList.remove('show'));
 $('#modal').addEventListener('click', e => { if(e.target.id==='modal') e.currentTarget.classList.remove('show'); });
 
 /* ---------- FAQ ---------- */
-const FAQ = [
+const FAQ_RU = [
   ['Кто может участвовать?','Выпускники Талдыкорганского лицея любого года: и КТЛ, и «Білім-инновация». При подаче указываешь год выпуска, финалистов проверяем через сообщество.'],
   ['Сколько работ можно отправить?','До 3 работ от одного участника. Каждую подавай отдельной заявкой.'],
   ['Можно участвовать командой?','Да, если все участники команды выпускники лицея. Приз один на команду.'],
@@ -1129,12 +1141,53 @@ const FAQ = [
   ['Кому будут принадлежать права?','Права на знак победителя переходят сообществу Taldyk Alumni. Автор всегда указывается, а при доработке знака мы работаем вместе с ним.'],
   ['Когда объявят победителя?','12 декабря в Instagram @taldycom. Финалистов объявим 5 декабря.']
 ];
-$('#faqList').innerHTML = FAQ.map((q,i) => `<div class="qa${i===0?' open':''}"><button>${q[0]}<i></i></button><div class="ans"><div><p>${q[1]}</p></div></div></div>`).join('');
-$$('.qa button').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
+const FAQ_KK = [
+  ['Кім қатыса алады?','Талдықорған лицейінің кез келген жылғы түлектері: ҚТЛ да, «Білім-инновация» да. Өтінімде бітірген жылыңды көрсетесің, финалистерді қауымдастық арқылы тексереміз.'],
+  ['Неше жұмыс жіберуге болады?','Бір қатысушыдан 3 жұмысқа дейін. Әрқайсысын бөлек өтініммен жібер.'],
+  ['Командамен қатысуға бола ма?','Иә, егер команданың барлық мүшесі лицей түлегі болса. Жүлде командаға біреу.'],
+  ['Қандай форматта тапсыру керек?','Кез келген: PNG, JPG, SVG, PDF, AI немесе ZIP-архив. Ең жақсысы фонсыз PNG немесе вектор. Оған қоса белгі нені білдіретіні туралы бір-екі сөйлем. Сынап көрудегі мокаптар өздігінен тіркеледі.'],
+  ['Нейрожелілерді қолдануға бола ма?','Иә, болады. Барлық түлек дизайнер емес, бұл қалыпты жағдай. Бастысы, идея сенікі болсын, ал белгіні мерчке басып шығаруға болатын болсын. Егер нейрожеліде жасалған жұмыс жеңсе, оны бірге векторға келтіреміз.'],
+  ['Құқық кімге тиесілі болады?','Жеңімпаз белгісіне құқық Taldyk Alumni қауымдастығына өтеді. Автор әрқашан көрсетіледі, ал белгіні жетілдірген кезде онымен бірге жұмыс істейміз.'],
+  ['Жеңімпазды қашан жариялайды?','12 желтоқсанда Instagram @taldycom парақшасында. Финалистерді 5 желтоқсанда жариялаймыз.']
+];
+function renderFAQ(){
+  const F = lang==='kk' ? FAQ_KK : FAQ_RU;
+  const open = $$('.qa').map(q=>q.classList.contains('open'));
+  $('#faqList').innerHTML = F.map((q,i) => `<div class="qa${(open.length?open[i]:i===0)?' open':''}"><button>${q[0]}<i></i></button><div class="ans"><div><p>${q[1]}</p></div></div></div>`).join('');
+  $$('.qa button').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
+}
+renderFAQ();
 
 /* ---------- marquee ---------- */
-const words = ['Taldyk Alumni','Создай логотип','с 1993 года','Біздің белгі','1500 выпускников','Logo Challenge','Получи приз','Бір қауымдастық'];
-$('#mq').innerHTML = [...words, ...words].map(w=>`<span>${w}</span>`).join('');
+function renderMarquee(){
+  const words = lang==='kk' ? ['Taldyk Alumni','Логотип жаса','1993 жылдан','Біздің белгі','1500 түлек','Logo Challenge','Жүлде ал','Бір қауымдастық'] : ['Taldyk Alumni','Создай логотип','с 1993 года','Біздің белгі','1500 выпускников','Logo Challenge','Получи приз','Бір қауымдастық'];
+  $('#mq').innerHTML = [...words, ...words].map(w=>`<span>${w}</span>`).join('');
+}
+renderMarquee();
+
+/* ---------- i18n ---------- */
+const KK = {"сообщество выпускников": "түлектер қауымдастығы", "О нас": "Біз туралы", "Что мы делаем": "Не істейміз", "Примерочная": "Сынап көру", "Приз": "Жүлде", "Этапы": "Кезеңдер", "Участвовать": "Қатысу", "Taldyk Alumni объявляет конкурс · приём работ до 01.12": "Taldyk Alumni байқау жариялайды · жұмыстар 01.12 дейін қабылданады", "Создай <em>логотип</em>": "Қауымдастығымызға", "для нашего сообщества": "<em>логотип</em> жаса", "и получи приз от нас": "және бізден жүлде ал", "Мы, выпускники Талдыкорганского лицея, ищем свой знак. Победитель получит Бокс выпускника и денежный приз, а его логотип появится на мерче 1500 выпускников.": "Біз, Талдықорған лицейінің түлектері, өз белгімізді іздеп жүрміз. Жеңімпаз ақшалай жүлде мен Түлек боксын алады, ал оның логотипі 1500 түлектің мерчінде болады.", "Примерить свой логотип": "Логотипіңді сынап көр", "Читать бриф": "Брифті оқу", "Шопер<small>Мерч</small>": "Шоппер<small>Мерч</small>", "Твой знак<small>Примерочная</small>": "Сенің белгің<small>Сынап көру</small>", "Примерить логотип <i>↗</i>": "Логотипті сынап көр <i>↗</i>", "(01) О сообществе": "(01) Қауымдастық туралы", "Кто такие<br><em>Taldyk Alumni</em>": "<em>Taldyk Alumni</em><br>деген кім", "Сообщество выпускников Талдыкорганского лицея для одарённых мальчиков: бывший КТЛ, сегодня «Білім-инновация».": "Талдықорғандағы дарынды ұлдарға арналған лицей түлектерінің қауымдастығы: бұрынғы ҚТЛ, бүгінгі «Білім-инновация».", "С <b>1993 года</b> лицей окончили около <b>1500 ребят</b>. После выпускного мы не разошлись: встречаемся, играем в футбол, бегаем марафоны, путешествуем и помогаем лицею, который когда-то стал нашим домом.": "<b>1993 жылдан</b> бері лицейді <b>1500-ге жуық</b> жігіт бітірді. Бітіру кешінен кейін де біз ажырамадық: кездесеміз, футбол ойнаймыз, марафон жүгіреміз, саяхаттаймыз және бір кезде үйімізге айналған лицейге көмектесеміз.", "Сегодня мы работаем в разных сферах и странах, но остаёмся на связи. Каждый месяц у нас что-то происходит: от Alumni Talk со спикерами-выпускниками до поздравления наших апай в День повара. Мы растём, и нам нужен свой знак, по которому выпускник любого года узнает своих.": "Бүгін біз әр салада, әр елде жұмыс істейміз, бірақ байланысты үзбейміз. Ай сайын бір іс-шара өтеді: түлек-спикерлермен Alumni Talk-тан бастап Аспаздар күнінде апайларымызды құттықтауға дейін. Біз өсіп келеміз, сондықтан кез келген жылғы түлек өзімізді бірден танитын белгі керек.", "Наука": "Ғылым", "Образование": "Білім беру", "Госслужба": "Мемлекеттік қызмет", "год основания лицея": "лицейдің құрылған жылы", "выпускников по всему миру": "бүкіл әлемдегі түлектер", "истории, которая продолжается": "жалғасып жатқан тарих", "языка обучения: қазақша, русский, English, Türkçe": "оқыту тілі: қазақша, орысша, English, Türkçe", "(02) Что мы делаем": "(02) Не істейміз", "Сообщество,<br>которое <em>живёт</em>": "<em>Тірі</em><br>қауымдастық", "событий только<br>за осень 2026": "іс-шара 2026 жылдың<br>күзінде ғана", "Встречи": "Кездесулер", "Alumni Reunion Day в Талдыкоргане, Welcome party для выпускников 2026 в Астане и Алматы, встречи юбилейных выпусков.": "Талдықорғандағы Alumni Reunion Day, Астана мен Алматыдағы 2026 жылғы түлектерге арналған Welcome party, мерейтойлық түлектер кездесулері.", "Выпускники рассказывают о карьере, ошибках и опыте. Честно, без пафоса, для своих.": "Түлектер мансабы, қателіктері мен тәжірибесі туралы айтады. Шынайы, жасандылықсыз, өзімізге арнап.", "Football Cup 30+, турнир выпусков 1997-2013, команда AFC Jetisu, Unity League и Almaty Marathon с pasta party накануне.": "Football Cup 30+, 1997-2013 жылғы түлектер турнирі, AFC Jetisu командасы, Unity League және алдында pasta party өтетін Almaty Marathon.", "Поддержка учеников": "Оқушыларды қолдау", "Помощь в подготовке к олимпиадам, Counseling Day о вузах Казахстана и зарубежья, КВН, Alumni Quiz и Brain Rain.": "Олимпиадаға дайындыққа көмек, Қазақстан мен шетелдегі ЖОО туралы Counseling Day, КВН, Alumni Quiz және Brain Rain.", "Спасибо нашим людям": "Біздің адамдарға алғыс", "День учителя в Талдыкоргане, поздравление апай в День повара, День технического персонала, проводы на пенсию.": "Талдықорғандағы Ұстаздар күні, Аспаздар күнінде апайларды құттықтау, Тазалықшылар күні, зейнеткерлікке шығарып салу.", "Поездки": "Саяхаттар", "Актау, Китай, Джунгарский Алатау. Едем вместе туда, куда в лицее мечтали поехать.": "Ақтау, Қытай, Жоңғар Алатауы. Лицейде армандаған жерлерге бірге барамыз.", "Наш знак сегодня<br>и <em>что дальше</em>": "Бүгінгі белгіміз<br>және <em>одан әрі</em>", "Бриф помогает участникам понять, от чего оттолкнуться и где будет жить новый знак. Это ориентиры, а не жёсткие правила.": "Бриф қатысушыларға неден бастау керегін және жаңа белгі қайда қолданылатынын түсінуге көмектеседі. Бұл қатаң ереже емес, бағдар.", "Сейчас": "Қазір", "Это наш нынешний логотип": "Бұл біздің қазіргі логотипіміз", "Дерево с рукой вместо ствола: рост, поддержка и корни, которые держат нас вместе. Он остаётся частью нашей истории.": "Діңінің орнында қолы бар ағаш: өсу, қолдау және бізді біріктіріп тұрған тамырлар. Ол тарихымыздың бір бөлігі болып қала береді.", "Новый знак может развить идею дерева, переосмыслить её или быть совсем другим. Главное, чтобы выпускник любого года сразу узнал в нём своих: на худи, значке, аватарке и сцене встречи выпускников.": "Жаңа белгі ағаш идеясын дамыта алады, оны қайта ойластыра алады немесе мүлде басқа болуы мүмкін. Ең бастысы, кез келген жылғы түлек одан өзімізді бірден танысын: худиде, значокта, аватаркада және түлектер кездесуінің сахнасында.", "Идеи для вдохновения": "Шабыт үшін идеялар", "Тал<em>ива</em>": "Тал<em>тал ағашы</em>", "Корень названия Талдыкорган. Корни, рост, преемственность поколений.": "Талдықорған атауының түбірі. Тамыр, өсу, ұрпақтар сабақтастығы.", "Жетісу<em>семь рек</em>": "Жетісу<em>жеті өзен</em>", "Один исток и много дорог. Выпускники разъехались по миру, но начали в одном месте.": "Бір бастау, көп жол. Түлектер әлемге тарады, бірақ бір жерден бастады.", "Шаңырақ<em>общий дом</em>": "Шаңырақ<em>ортақ үй</em>", "Интернат был нашим домом. Шаңырақ про единство и то, что держит нас вместе.": "Интернат біздің үйіміз болды. Шаңырақ бірлік пен бізді біріктіріп тұрған нәрсе туралы.", "Что важно": "Не маңызды", "Работает в одном цвете, на светлом и тёмном фоне": "Бір түсте, ашық және күңгірт фонда жақсы көрінеді", "Читается на значке размером 2 см": "2 см значокта анық оқылады", "Подходит для печати DTF и вышивки": "DTF басып шығаруға және кестелеуге жарайды", "Есть версия с надписью «Taldyk Alumni»": "«Taldyk Alumni» жазуы бар нұсқасы бар", "Можно использовать нейросети и любые инструменты": "Нейрожелілерді және кез келген құралды қолдануға болады", "Чего не делать": "Не істеуге болмайды", "Копировать логотип лицея или фонда «Білім-инновация»": "Лицейдің немесе «Білім-инновация» қорының логотипін көшіру", "Выдавать чужие работы за свои": "Басқаның жұмысын өзінікі ретінде ұсыну", "Использовать политическую и религиозную символику": "Саяси және діни символдарды қолдану", "(04) Примерочная": "(04) Сынап көру", "Посмотри знак <em>в деле</em>": "Белгіні <em>іс жүзінде</em> көр", "Загрузи логотип и сразу увидишь его на мерче. Файл никуда не отправляется, пока ты сам не нажмёшь «Отправить».": "Логотипті жүкте де, оны мерчте бірден көр. Өзің «Жіберу» батырмасын баспайынша, файл ешқайда жіберілмейді.", "Перетащи логотип сюда": "Логотипті осында сүйре", "или нажми, чтобы выбрать · PNG без фона или SVG лучше всего": "немесе таңдау үшін бас · фонсыз PNG немесе SVG жақсы", "Размер логотипа": "Логотип өлшемі", "Скачать мокапы": "Мокаптарды жүктеу", "Отправить работу →": "Жұмысты жіберу →", "Скачается один PNG со всеми мокапами. Каждый мокап можно скачать и отдельно.": "Барлық мокап бір PNG файлмен жүктеледі. Әр мокапты бөлек те жүктеуге болады.", "(05) Подача работы": "(05) Жұмыс тапсыру", "Отправь свой<br><em>вариант</em>": "Өз <em>нұсқаңды</em><br>жібер", "Можно подать до 3 работ. Мокапы из примерочной прикрепятся к заявке автоматически.": "3 жұмысқа дейін тапсыруға болады. Сынап көрудегі мокаптар өтінімге автоматты түрде тіркеледі.", "<b>1</b>Прочитай бриф": "<b>1</b>Брифті оқы", "<b>2</b>Примерь знак на мерче": "<b>2</b>Белгіні мерчте сынап көр", "<b>3</b>Заполни заявку и прикрепи файлы": "<b>3</b>Өтінімді толтырып, файлдарды тірке", "<b>4</b>Жди шорт-лист 05.12": "<b>4</b>Шорт-лист 05.12 жарияланады", "Имя и фамилия <i>*</i>": "Аты-жөні <i>*</i>", "Год выпуска <i>*</i>": "Бітірген жылы <i>*</i>", "Выбери год": "Жылды таңда", "Телефон или WhatsApp <i>*</i>": "Телефон немесе WhatsApp <i>*</i>", "Город и сфера работы": "Қала және жұмыс саласы", "Идея знака: что он означает <i>*</i>": "Белгі идеясы: ол нені білдіреді <i>*</i>", "Файлы работы <i>*</i> · любой формат: PNG, SVG, PDF, AI, ZIP": "Жұмыс файлдары <i>*</i> · кез келген формат: PNG, SVG, PDF, AI, ZIP", "Я выпускник лицея и согласен с правилами: в случае победы права на знак переходят сообществу Taldyk Alumni, автор указывается.": "Мен лицей түлегімін және ережелермен келісемін: жеңіске жеткен жағдайда белгіге құқық Taldyk Alumni қауымдастығына өтеді, автор көрсетіледі.", "Отправить работу <span class=\"arr\">↗</span>": "Жұмысты жіберу <span class=\"arr\">↗</span>", "(06) Приз": "(06) Жүлде", "Мерч и <em>денежный приз</em>": "Мерч және <em>ақшалай жүлде</em>", "Автор лучшего знака получит денежный приз и Бокс выпускника: первый мерч Taldyk Alumni со своим же логотипом.": "Үздік белгінің авторы ақшалай жүлде мен Түлек боксын алады: өз логотипі салынған алғашқы Taldyk Alumni мерчі.", "Что получит победитель": "Жеңімпаз не алады", "Денежный приз <span>Сумма скоро</span>": "Ақшалай жүлде <span>Сомасы жақында</span>", "Худи с новым знаком <span>№001</span>": "Жаңа белгісі бар худи <span>№001</span>", "Термокружка <span>Мерч</span>": "Термокесе <span>Мерч</span>", "Стикерпак и значки <span>Сет</span>": "Стикерпак пен значоктар <span>Жиынтық</span>", "Именной сертификат автора <span>Подпись</span>": "Автордың атаулы сертификаты <span>Қолтаңба</span>", "<b>+</b> имя автора на сайте и в Instagram @taldycom, вручение на встрече выпускников.": "<b>+</b> автордың аты сайтта және Instagram @taldycom-да, жүлде түлектер кездесуінде табысталады.", "(07) Как выбираем": "(07) Қалай таңдаймыз", "Жюри + <em>голос</em><br>выпускников": "Қазылар + <em>түлектер</em><br>дауысы", "Честно и прозрачно: профессиональный взгляд жюри и голос самого сообщества.": "Әділ әрі ашық: қазылардың кәсіби көзқарасы және қауымдастықтың өз дауысы.", "Приём работ": "Жұмыстарды қабылдау", "Подаём до 3 работ через форму на сайте.": "Сайттағы форма арқылы 3 жұмысқа дейін тапсырамыз.", "Жюри: топ-5": "Қазылар: топ-5", "Жюри из выпускников и учителей выбирает пять финалистов.": "Түлектер мен ұстаздардан құралған қазылар бес финалисті таңдайды.", "Голосование": "Дауыс беру", "Выпускники голосуют за финалистов в @taldycom.": "Түлектер @taldycom парақшасында финалистерге дауыс береді.", "Победитель": "Жеңімпаз", "Объявляем автора нового знака Taldyk Alumni.": "Taldyk Alumni жаңа белгісінің авторын жариялаймыз.", "<b>50%</b>оценка жюри": "<b>50%</b>қазылар бағасы", "<b>50%</b>голосование выпускников": "<b>50%</b>түлектер дауысы", "Частые<br><em>вопросы</em>": "Жиі қойылатын<br><em>сұрақтар</em>", "Не нашёл ответ? Пиши в Direct <a href=\"https://www.instagram.com/taldycom/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--lime)\">@taldycom</a>.": "Жауап таппадың ба? Direct-ке жаз: <a href=\"https://www.instagram.com/taldycom/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--lime)\">@taldycom</a>.", "С уважением, команда Taldyk Alumni · сообщество выпускников Талдыкорганского КТЛ / БИЛ · 2026": "Құрметпен, Taldyk Alumni командасы · Талдықорған ҚТЛ / БИЛ түлектерінің қауымдастығы · 2026", "Понятно": "Түсінікті"};
+const PH = {'Коротко расскажи, какую историю несёт твой знак':'Белгің қандай тарихты айтатынын қысқаша жаз'};
+const norm = x => x.replace(/\s+/g,' ').trim();
+let I18N = null;
+function applyLang(){
+  document.documentElement.lang = lang==='kk' ? 'kk' : 'ru';
+  if(!I18N){
+    const map = new Map(Object.entries(KK).map(([k,v])=>[norm(k),v]));
+    I18N = [];
+    document.querySelectorAll('body *').forEach(el => {
+      if(el.closest('svg,script,#grid,#prizeVis,#faqList,#mq,#flist,.obj')) return;
+      const h = norm(el.innerHTML); if(map.has(h)) I18N.push([el, el.innerHTML, map.get(h)]);
+    });
+    $$('[placeholder]').forEach(el => { const p = el.getAttribute('placeholder'); if(PH[p]) el.dataset.phru = p; });
+  }
+  I18N.forEach(([el,ru,kk]) => { el.innerHTML = lang==='kk' ? kk : ru; });
+  $$('[data-phru]').forEach(el => el.setAttribute('placeholder', lang==='kk' ? PH[el.dataset.phru] : el.dataset.phru));
+  $$('#lang button').forEach(b => b.classList.toggle('on', b.dataset.l===lang));
+  renderGrid(false); renderHero(); renderPrize(); renderAttach(); renderFiles(); renderFAQ(); renderMarquee();
+}
+$$('#lang button').forEach(b => b.addEventListener('click', () => { lang = b.dataset.l; try{ localStorage.setItem('ta_lang', lang); }catch(e){} applyLang(); }));
+applyLang();
 
 /* ---------- reveal + count ---------- */
 const io = new IntersectionObserver(es => es.forEach(en => {
