@@ -405,7 +405,7 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
     <i class="sparkle" style="left:28%;top:10px;animation-delay:2.1s"></i>
     <i class="sparkle" style="right:20%;top:470px;animation-delay:.9s"></i>
 
-    <div class="pill"><img class="pill-mark" src="" data-img="mark" alt="">Taldyk Alumni объявляет конкурс · приём работ до 20.12</div>
+    <div class="pill"><img class="pill-mark" src="" data-img="mark" alt="">Taldyk Alumni объявляет конкурс · приём работ до 01.12</div>
     <h1><span class="ln"><span>Создай <em>логотип</em></span></span><span class="ln"><span>для нашего сообщества</span></span><span class="ln small"><span>и получи приз от нас</span></span></h1>
     <p class="sub">Мы, выпускники Талдыкорганского лицея, ищем свой знак. Победитель получит Бокс выпускника, а его логотип появится на мерче 1500 выпускников.</p>
     <div class="hero-ctas">
@@ -560,7 +560,7 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
           <div><b>1</b>Прочитай бриф</div>
           <div><b>2</b>Примерь знак на мерче</div>
           <div><b>3</b>Заполни заявку и прикрепи файлы</div>
-          <div><b>4</b>Жди шорт-лист 24.12</div>
+          <div><b>4</b>Жди шорт-лист 05.12</div>
         </div>
       </div>
       <div class="box reveal d1">
@@ -619,10 +619,10 @@ footer{margin-top:130px;border-top:1px solid var(--line);padding:50px 0 34px;ove
     <div class="tl reveal" id="tl">
       <div class="tl-track">
         <div class="tl-line"><i></i></div>
-        <div class="st"><span class="mono">25.11 · 20.12</span><h4>Приём работ</h4><p>Подаём до 3 работ через форму на сайте.</p></div>
-        <div class="st"><span class="mono">21.12 · 24.12</span><h4>Жюри: топ-5</h4><p>Жюри из выпускников и учителей выбирает пять финалистов.</p></div>
-        <div class="st"><span class="mono">25.12 · 29.12</span><h4>Голосование</h4><p>Выпускники голосуют за финалистов в @taldycom.</p></div>
-        <div class="st"><span class="mono">30.12</span><h4>Победитель</h4><p>Объявляем автора нового знака Taldyk Alumni.</p></div>
+        <div class="st"><span class="mono">18.11 · 01.12</span><h4>Приём работ</h4><p>Подаём до 3 работ через форму на сайте.</p></div>
+        <div class="st"><span class="mono">02.12 · 05.12</span><h4>Жюри: топ-5</h4><p>Жюри из выпускников и учителей выбирает пять финалистов.</p></div>
+        <div class="st"><span class="mono">06.12 · 10.12</span><h4>Голосование</h4><p>Выпускники голосуют за финалистов в @taldycom.</p></div>
+        <div class="st"><span class="mono">12.12</span><h4>Победитель</h4><p>Объявляем автора нового знака Taldyk Alumni.</p></div>
       </div>
       <div class="score">
         <div class="a"><b>50%</b>оценка жюри</div>
@@ -1109,7 +1109,7 @@ $('#form').addEventListener('submit', async e => {
     const j = await r.json();
     if(!j.ok) throw new Error(j.error || 'fail');
     $('#mTitle').textContent = 'Работа отправлена!';
-    $('#mText').textContent = `Спасибо, ${payload.name.split(' ')[0]}! Заявка №${j.id} у нас. Шорт-лист объявим 24 декабря в Instagram @taldycom.`;
+    $('#mText').textContent = `Спасибо, ${payload.name.split(' ')[0]}! Заявка №${j.id} у нас. Шорт-лист объявим 5 декабря в Instagram @taldycom.`;
     $('#modal').classList.add('show');
     f.reset(); state.files = []; renderFiles();
   } catch(err){
@@ -1127,7 +1127,7 @@ const FAQ = [
   ['В каком формате сдавать?','В любом: PNG, JPG, SVG, PDF, AI или ZIP-архив. Лучше всего PNG без фона или вектор. Плюс пара предложений о том, что означает знак. Мокапы из примерочной прикрепятся сами.'],
   ['Можно ли использовать нейросети?','Да, можно. Не все выпускники дизайнеры, и это нормально. Главное, чтобы идея была твоей, а знак можно было напечатать на мерче. Если победит работа из нейросети, мы вместе доведём её до вектора.'],
   ['Кому будут принадлежать права?','Права на знак победителя переходят сообществу Taldyk Alumni. Автор всегда указывается, а при доработке знака мы работаем вместе с ним.'],
-  ['Когда объявят победителя?','30 декабря в Instagram @taldycom. Финалисты узнают о шорт-листе 24 декабря.']
+  ['Когда объявят победителя?','12 декабря в Instagram @taldycom. Финалистов объявим 5 декабря.']
 ];
 $('#faqList').innerHTML = FAQ.map((q,i) => `<div class="qa${i===0?' open':''}"><button>${q[0]}<i></i></button><div class="ans"><div><p>${q[1]}</p></div></div></div>`).join('');
 $$('.qa button').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
